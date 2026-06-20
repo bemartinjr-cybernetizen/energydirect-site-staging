@@ -3,407 +3,277 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Ambit Energy Plans in Houston, TX | Compare Local Electricity Rates (CenterPoint Energy)</title>
-  <meta name="description" content="Compare Ambit Energy plans available in Houston (CenterPoint Energy service area). Enter your ZIP to see local electricity options. Rates vary by ZIP and usage—always review the Electricity Facts Label (EFL) before enrolling." />
+  <title>Houston Electricity Rates &amp; Plans | Energy Direct (CenterPoint Area)</title>
+  <meta name="description" content="Compare Houston electricity rates and plans with Energy Direct, a local independent Ambit Energy consultant serving the CenterPoint Energy service area. Enter your ZIP, review the Electricity Facts Label, and enroll. Call (361) 582-9724." />
+  <link rel="canonical" href="https://energydirect.org/houston/" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="stylesheet" href="/style.css" />
   <style>
-    <link rel="canonical" href="https://energydirect.org/houston/" />
+    body { background:#f7f8fa; color:#1e293b; }
+    .wrap { max-width:1100px; margin:0 auto; padding:0 1rem; }
 
-    body { background:#f9fafb; }
-    .grid-2 { display:grid; gap:24px; grid-template-columns: 1fr; }
-    @media(min-width:900px){ .grid-2{ grid-template-columns: 1fr 1fr; } }
-    .card { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:20px; box-shadow:0 2px 8px rgba(15,23,42,.04); }
-    .btn-primary { display:inline-block; padding:12px 20px; background:#2563eb; color:#fff !important; font-weight:600; border-radius:10px; text-decoration:none; }
+    /* Utility top bar with phone */
+    .util-bar {
+      background:#0f172a; color:#fff; font-size:.92rem;
+      display:flex; justify-content:center; flex-wrap:wrap; gap:.4rem 1.25rem;
+      align-items:center; padding:.55rem 1rem; text-align:center;
+    }
+    .util-bar a { color:#fff; text-decoration:none; font-weight:600; }
+    .util-bar .call { background:#22c55e; padding:.3rem .8rem; border-radius:999px; }
+
+    /* Hero */
+    .hero {
+      position:relative; color:#fff; text-align:center;
+      padding:3.5rem 1rem 3rem;
+      background:
+        linear-gradient(135deg, rgba(245,124,0,.92) 0%, rgba(251,176,52,.92) 100%),
+        url('/images/houston-electricity-centerpoint-skyline.webp') center/cover no-repeat;
+      text-shadow:0 2px 8px rgba(0,0,0,.35);
+    }
+    .hero .eyebrow { letter-spacing:.12em; text-transform:uppercase; font-size:.85rem; font-weight:700; opacity:.95; }
+    .hero h1 { font-size:2.6rem; line-height:1.15; margin:.4rem auto .6rem; max-width:840px; }
+    .hero p.lede { max-width:720px; margin:0 auto 1.4rem; font-size:1.18rem; }
+    .hero-cta { display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; }
+    .btn {
+      display:inline-block; padding:.95rem 1.8rem; border-radius:999px; font-weight:700;
+      text-decoration:none; font-size:1.05rem;
+    }
+    .btn-primary { background:#2563eb; color:#fff !important; box-shadow:0 6px 16px rgba(37,99,235,.4); }
     .btn-primary:hover { background:#1d4ed8; }
-    .cta-section { text-align:center; margin-top:1.5rem; }
-    .muted { color:#475569; }
+    .btn-ghost { background:rgba(255,255,255,.15); color:#fff !important; border:1.5px solid rgba(255,255,255,.7); }
+    .btn-ghost:hover { background:rgba(255,255,255,.28); }
 
-    .accordion {
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      margin-bottom: 8px;
-      background: #fff;
-    }
-    .accordion summary {
-      cursor: pointer;
-      padding: 12px 16px;
-      font-weight: 600;
-      list-style: none;
-    }
-    .accordion summary:hover {
-      background: #f3f4f6;
-    }
-    .accordion p {
-      padding: 0 16px 12px;
-      margin: 0;
-      color: #374151;
-    }
+    /* Trust strip */
+    .trust { background:#fff; border-bottom:1px solid #e5e7eb; }
+    .trust .wrap { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem 2rem; padding:.9rem 1rem; }
+    .trust span { font-size:.95rem; color:#334155; font-weight:600; }
+    .trust b { color:#0f172a; }
+
+    /* Sections */
+    .section { padding:2.2rem 0 .5rem; }
+    .section h2 { font-size:1.6rem; margin:0 0 1rem; }
+    .grid-2 { display:grid; gap:20px; grid-template-columns:1fr; }
+    @media(min-width:880px){ .grid-2{ grid-template-columns:1fr 1fr; } }
+    .card { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:22px; box-shadow:0 2px 10px rgba(15,23,42,.05); text-align:left; }
+    .card h3 { margin:.1rem 0 .6rem; font-size:1.18rem; }
+    .muted { color:#475569; }
+    .pill-steps { margin:1rem 0 0; padding:1rem 1.1rem; border-radius:12px; background:#eff6ff; }
+    .pill-steps ol { margin:.4rem 0 0; padding-left:1.2rem; }
+    .pill-steps li { margin:.25rem 0; }
+
+    /* Mid CTA band */
+    .cta-band { background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%); color:#fff; border-radius:16px; padding:2rem 1.5rem; text-align:center; margin:2.4rem 0; }
+    .cta-band h2 { color:#fff; margin:0 0 .5rem; }
+    .cta-band p { margin:0 0 1.2rem; opacity:.92; }
+
+    .accordion { border:1px solid #e5e7eb; border-radius:10px; margin-bottom:8px; background:#fff; }
+    .accordion summary { cursor:pointer; padding:12px 16px; font-weight:600; list-style:none; }
+    .accordion summary:hover { background:#f3f4f6; }
+    .accordion p { padding:0 16px 12px; margin:0; color:#374151; }
+
+    .breadcrumbs { font-size:.9rem; color:#64748b; padding:.8rem 0; }
+    .breadcrumbs a { color:#2563eb; text-decoration:none; }
   </style>
 </head>
 <body>
-  <!-- Logo -->
-  <div style="text-align:center; margin: 1rem 0;">
-    <img src="/images/ambit logo.png" alt="Ambit Energy Consultant" style="width: 450px; max-width: 100%; height: auto; margin-bottom: 1rem;">
-  </div>
 
-  <!-- Breadcrumbs -->
-  <div class="breadcrumb-wrapper">
-    <nav class="breadcrumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a> › <span>Houston</span>
-    </nav>
+  <!-- Utility bar: local identity + click-to-call -->
+  <div class="util-bar">
+    <span><strong>Energy Direct</strong> — Local Independent Ambit Energy Consultant</span>
+    <a class="call" href="tel:+13615829724">📞 Call or text (361) 582-9724</a>
   </div>
 
   <!-- Hero -->
-  <header style="background: linear-gradient(135deg, #f57c00 0%, #fbb034 100%); color:#fff; text-align:center; padding:4rem 1rem; text-shadow:2px 2px 6px rgba(0,0,0,.3);">
-    <h1 style="font-size:2.5rem; margin:0;">Ambit Energy Plans in Houston, TX</h1>
-    <p style="max-width:700px; margin:1rem auto 0; font-size:1.2rem;">
-      Compare electricity plan options available in Houston and surrounding communities in the
-      <strong>CenterPoint Energy</strong> service area. <strong>Rates vary by ZIP</strong> and usage.
-      Always review the <strong>Electricity Facts Label (EFL)</strong> before enrolling.
+  <header class="hero">
+    <div class="eyebrow">Houston &amp; CenterPoint Energy Service Area</div>
+    <h1>Houston Electricity Rates, Compared Plainly</h1>
+    <p class="lede">
+      Energy Direct is your local guide to choosing a Houston electricity plan. Enter your ZIP,
+      compare real plans on the Electricity Facts Label, and enroll with a person you can actually call.
     </p>
-    <a href="https://energydirect.myambit.com/rates-and-plans/" target="_blank" rel="noopener" class="btn-primary">
-      View Plans & Enroll
-    </a>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="https://energydirect.myambit.com/rates-and-plans/" target="_blank" rel="noopener">View Plans &amp; Enroll</a>
+      <a class="btn btn-ghost" href="tel:+13615829724">Talk to a Local Consultant</a>
+    </div>
   </header>
 
-  <!-- Wide Skyline Image -->
-  <div style="max-width:1200px; margin:2rem auto; padding:0 1rem;">
-    <img src="/images/houston-electricity-centerpoint-skyline.webp" 
-         alt="Houston Texas skyline in CenterPoint service area electricity market" 
-         loading="lazy" 
-         style="width:100%; height:auto; border-radius:14px; box-shadow:0 4px 12px rgba(0,0,0,0.08);" />
+  <!-- Trust strip -->
+  <div class="trust">
+    <div class="wrap">
+      <span>✅ <b>Local Texas consultant</b>, not a call center</span>
+      <span>⚡ <b>CenterPoint</b> service area</span>
+      <span>📄 We read the <b>EFL</b> with you</span>
+      <span>☎️ <b>(361) 582-9724</b></span>
+    </div>
   </div>
 
-  <!-- Cards -->
-  <main class="grid-2" style="max-width:1100px; margin:0 auto; padding:2rem;">
-    <!-- Card 1 -->
-    <div class="card">
-      <h2>How electricity choice works in Houston</h2>
-      <p>
-        In the Houston area, <strong>CenterPoint Energy</strong> owns and maintains the poles, wires, and meters.
-        CenterPoint is your <em>Transmission and Distribution Utility (TDU)</em> and is responsible for
-        delivering power and restoring outages. Retail providers like Ambit handle your
-        <strong>plan options, pricing structure, and billing</strong>.
-      </p>
-      <p>
-        Neighborhoods such as <strong>Inside the Loop, The Heights, Westchase, Clear Lake, Cypress, Katy, Pearland, and Sugar Land</strong>
-        can see different plan availability and pricing based on ZIP code and usage. That’s why shopping
-        always starts with your specific service address—not a single “Houston average rate.”
-      </p>
-      <p>
-        Long cooling seasons and high humidity can push electricity usage higher, especially in single-family homes.
-        When you compare plans, look at how each plan performs at the usage levels that match your home or apartment,
-        not just the headline rate shown in an ad.
-      </p>
-      <div style="margin-top:1rem; padding:1rem; border-radius:10px; background:#eff6ff;">
-        <strong style="display:block; margin-bottom:.35rem;">Quick steps to compare Houston plans (CenterPoint)</strong>
-        <ol style="margin:0; padding-left:1.25rem; font-size:.95rem;">
-          <li>Enter your ZIP code on the plans page to see options in the CenterPoint service area.</li>
-          <li>Open the plan’s <strong>Electricity Facts Label (EFL)</strong> before you decide.</li>
-          <li>Compare average prices at <strong>500 / 1000 / 2000 kWh</strong> to match your typical usage.</li>
-          <li>Watch for minimum usage fees, base charges, and bill credit thresholds.</li>
-          <li>Confirm contract length and any early termination fee before enrolling.</li>
-        </ol>
+  <div class="wrap">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">Home</a> › <span>Houston</span></nav>
+
+    <!-- Intro / how it works -->
+    <section class="section">
+      <h2>How choosing a Houston electricity plan actually works</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Who does what in Houston</h3>
+          <p>
+            In the Houston area, <strong>CenterPoint Energy</strong> owns the poles, wires, and meters. They are your
+            <em>Transmission and Distribution Utility (TDU)</em> and handle delivery and outages, no matter which plan you pick.
+            A retail plan, like the ones Energy Direct helps you choose, sets your <strong>price, terms, and billing</strong>.
+          </p>
+          <p>
+            Neighborhoods from <strong>The Heights and Westchase to Katy, Pearland, and Sugar Land</strong> can see different
+            pricing by ZIP and usage. That is why a smart comparison starts with your address, not a single "Houston average rate."
+          </p>
+          <div class="pill-steps">
+            <strong>Compare a Houston plan in 5 steps</strong>
+            <ol>
+              <li>Enter your ZIP to see plans in the CenterPoint area.</li>
+              <li>Open the plan's <strong>Electricity Facts Label (EFL)</strong>.</li>
+              <li>Compare price at <strong>500 / 1000 / 2000 kWh</strong> to match your home.</li>
+              <li>Watch for minimum-usage fees and bill-credit thresholds.</li>
+              <li>Confirm contract length and any early-termination fee, then enroll.</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>What to check on the EFL</h3>
+          <p class="muted">Every Texas plan has an <strong>Electricity Facts Label</strong>. Use it to compare apples to apples:</p>
+          <ul>
+            <li><strong>Average price at 500 / 1000 / 2000 kWh</strong> — apartments vs. larger homes.</li>
+            <li><strong>Base charges or minimum-usage fees</strong> — fees if you use too little.</li>
+            <li><strong>Bill credits and thresholds</strong> — at what usage they apply.</li>
+            <li><strong>Contract length &amp; early-termination fee</strong> — what leaving early costs.</li>
+            <li><strong>Renewable content</strong> — the renewable percentage, if that matters to you.</li>
+          </ul>
+          <p class="muted" style="margin-top:.5rem;">
+            Want help reading one? See our <a href="/texas/electricity-facts-label/">Electricity Facts Label guide</a> or just call us.
+          </p>
+        </div>
       </div>
-      <div class="cta-section">
-        <a class="btn-primary" href="https://energydirect.myambit.com/rates-and-plans/" target="_blank" rel="noopener">
-          Compare Plans
-        </a>
+    </section>
+
+    <!-- Mid CTA band -->
+    <div class="cta-band">
+      <h2>Not sure which Houston plan fits?</h2>
+      <p>Skip the guesswork. A local consultant will walk your ZIP and usage with you, free.</p>
+      <a class="btn btn-primary" href="tel:+13615829724">Call (361) 582-9724</a>
+    </div>
+
+    <!-- More detail -->
+    <section class="section">
+      <div class="grid-2">
+        <div class="card">
+          <h3>Outages &amp; who to call</h3>
+          <p class="muted"><strong>CenterPoint Energy</strong> restores outages in Houston, even after you switch retail plans.</p>
+          <ul>
+            <li><a href="https://www.centerpointenergy.com/en-us/residential/customer-service/electric-outage" target="_blank" rel="noopener">CenterPoint Outage Center</a></li>
+            <li><a href="https://gis.centerpointenergy.com/OutageTracker/index.html" target="_blank" rel="noopener">Outage Tracker Map</a></li>
+            <li><a href="https://www.centerpointenergy.com/en-us/contact-us" target="_blank" rel="noopener">Contact CenterPoint</a></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Typical Houston usage</h3>
+          <ul>
+            <li><strong>Apartments:</strong> ~750–1000 kWh / month</li>
+            <li><strong>Single-family homes:</strong> ~1200–2000+ kWh / month</li>
+            <li><strong>Summer:</strong> higher, from long A/C run-time and humidity</li>
+          </ul>
+          <p class="muted">EFL pricing is shown at 500 / 1000 / 2000 kWh, so knowing your usage makes the right plan obvious.</p>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Card 2 -->
-    <div class="card">
-      <h2>What to check in the EFL</h2>
-      <p class="muted" style="font-size:.95rem;">
-        Every electricity plan in Houston includes an <strong>Electricity Facts Label (EFL)</strong>.
-        This standard document explains how a plan is priced and which charges are included.
-        Use the EFL to compare plans side by side.
-      </p>
-      <ul>
-        <li>
-          <strong>Average price at 500 / 1000 / 2000 kWh</strong><br>
-          See how the plan performs for apartments, townhomes, and larger single-family homes.
-        </li>
-        <li>
-          <strong>Base charges or minimum usage fees</strong><br>
-          Some plans charge a fee when your usage falls below a certain level.
-        </li>
-        <li>
-          <strong>Bill credits and thresholds</strong><br>
-          Check at what usage levels bill credits apply and what happens if you’re above or below that range.
-        </li>
-        <li>
-          <strong>Contract length & early termination fee</strong><br>
-          Know how long you’re committing and what it might cost to end the contract early.
-        </li>
-        <li>
-          <strong>Renewable content</strong><br>
-          Review the renewable percentage listed if greener electricity is important to you.
-        </li>
-      </ul>
-      <p class="muted" style="font-size:.95rem; margin-top:.5rem;">
-        For a detailed walkthrough of each section, see our guide:
-        <a href="/texas/electricity-facts-label/">Understanding the Electricity Facts Label (EFL)</a>.
-      </p>
-      <div class="cta-section">
-        <a class="btn-primary" href="https://energydirect.myambit.com/rates-and-plans/" target="_blank" rel="noopener">
-          See Options
-        </a>
+    <!-- FAQ -->
+    <section class="section">
+      <h2>Houston electricity questions</h2>
+      <details class="accordion"><summary>Will my lights go out when I switch providers?</summary>
+        <p>Typically no. CenterPoint keeps delivering power while your new plan begins billing.</p></details>
+      <details class="accordion"><summary>Who is the TDU in Houston?</summary>
+        <p>CenterPoint Energy is the Transmission and Distribution Utility for most of the Houston area. They manage lines, outages, and delivery.</p></details>
+      <details class="accordion"><summary>How do I compare rates by ZIP code?</summary>
+        <p>Enter your ZIP on the plans page to see options for your address. Rates and availability vary by ZIP and usage across Houston neighborhoods.</p></details>
+      <details class="accordion"><summary>Can I choose a renewable plan in Houston?</summary>
+        <p>Many plans in the CenterPoint area include renewable content. Check the renewable percentage on each plan's EFL.</p></details>
+    </section>
+
+    <!-- Resources -->
+    <section class="section">
+      <div class="card">
+        <h3>Houston resources</h3>
+        <ul>
+          <li><a href="/houston/compare-ambit-plans-by-zip/">Compare plans by ZIP (Houston)</a></li>
+          <li><a href="/texas/electricity-facts-label/">Understanding the EFL</a></li>
+          <li><a href="/texas/electricity-glossary/">Texas Electricity Glossary</a></li>
+        </ul>
+        <p class="muted"><strong>Nearby CenterPoint communities:</strong> Pasadena • Pearland • Sugar Land • Baytown • The Woodlands • League City</p>
       </div>
-    </div>
-
-    <!-- Card 3 -->
-    <div class="card">
-      <h2>Outages & FAQs — CenterPoint</h2>
-      <p class="muted">
-        <strong>CenterPoint Energy</strong> manages electricity delivery and outage restoration in Houston.
-        Your retail provider manages the plan and billing, but CenterPoint is responsible for getting the lights
-        back on when there’s an outage.
-      </p>
-      <ul style="list-style:disc; padding-left:1.1rem;">
-        <li><a href="https://www.centerpointenergy.com/en-us/residential/customer-service/electric-outage" target="_blank" rel="noopener">CenterPoint Outage Center</a></li>
-        <li><a href="https://gis.centerpointenergy.com/OutageTracker/index.html" target="_blank" rel="noopener">Outage Tracker Map</a></li>
-        <li><a href="https://www.centerpointenergy.com/en-us/contact-us" target="_blank" rel="noopener">Contact CenterPoint</a></li>
-      </ul>
-      <hr style="border:none; border-top:1px solid #e5e7eb; margin:1rem 0;">
-      <p>
-        <strong>Who is responsible for outages in Houston?</strong><br>
-        CenterPoint Energy manages outage response and delivery infrastructure in Houston, even if you switch retail providers.
-      </p>
-      <p>
-        <strong>Can I get renewable energy plans in Houston?</strong><br>
-        Many providers offer plans with renewable content in the CenterPoint service area.
-        Always check the EFL for the renewable percentage and any special terms.
-      </p>
-      <p>
-        <strong>How do I compare rates by ZIP code?</strong><br>
-        Enter your ZIP on the provider’s website to see available plans. <strong>Rates vary by ZIP and usage</strong>,
-        so offers can differ across Houston neighborhoods and suburbs.
-      </p>
-      <div class="cta-section">
-        <a class="btn-primary" href="https://energydirect.myambit.com/rates-and-plans/" target="_blank" rel="noopener">
-          Start or Switch
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 4 -->
-    <div class="card">
-      <h2>Houston Resources</h2>
-      <p class="muted" style="font-size:.95rem;">
-        Use these resources to better understand how electricity plans work in Houston and what to
-        look for before you enroll.
-      </p>
-      <ul style="list-style:none; padding:0; line-height:1.8;">
-        <li><a href="/houston/compare-ambit-plans-by-zip/">Compare Ambit Plans by ZIP (Houston)</a></li>
-        <li><a href="/texas/electricity-facts-label/">Understanding the EFL</a></li>
-        <li><a href="/texas/electricity-glossary/">Texas Electricity Glossary</a></li>
-      </ul>
-      <h3 style="margin-top:1rem;">Nearby Areas</h3>
-      <p class="muted" style="font-size:.95rem;">
-        Many nearby communities are also in the CenterPoint service area, including:
-        <br><strong>Pasadena • Pearland • Sugar Land • Baytown • The Woodlands • League City</strong>
-      </p>
-    </div>
-
-    <!-- Card 5 -->
-    <div class="card">
-      <h2>Average electricity usage in Houston</h2>
-      <ul>
-        <li><strong>Apartments:</strong> often around 750–1000 kWh per month</li>
-        <li><strong>Single-family homes:</strong> commonly 1200–2000 kWh per month or more</li>
-        <li><strong>Summer months:</strong> higher usage due to extended A/C run-time and humidity</li>
-      </ul>
-      <p>
-        Usage levels matter because EFL pricing is shown at 500, 1000, and 2000 kWh.
-        Knowing your typical usage from past bills makes it easier to see which plan structure fits your home.
-      </p>
-    </div>
-
-    <!-- Card 6 -->
-    <div class="card">
-      <h2>Understanding the Electricity Facts Label (EFL)</h2>
-      <p>
-        The EFL is standardized across providers in Texas. That means every plan’s EFL uses the same format to
-        show key information, including:
-      </p>
-      <ul>
-        <li>Average prices at 500, 1000, and 2000 kWh usage levels</li>
-        <li>Any base charges or minimum usage fees</li>
-        <li>Contract length and early termination fees</li>
-        <li>Renewable content percentage</li>
-      </ul>
-      <p>
-        Because the format is consistent, it’s easier to compare one plan’s EFL to another.
-        For a detailed breakdown of each section, visit our
-        <a href="/texas/electricity-facts-label/">Electricity Facts Label guide</a>.
-      </p>
-    </div>
-
-    <!-- Card 7 -->
-    <div class="card">
-      <h2>Green & renewable options</h2>
-      <p>
-        Many retail electricity providers – including Ambit – may offer plans with renewable content in Houston.
-        These plans can include energy sourced from wind or solar, while CenterPoint Energy continues to handle
-        delivery and outage restoration.
-      </p>
-      <p>
-        If you’re interested in renewable options, look for the renewable percentage in the EFL and any notes
-        about how the plan sources or offsets electricity.
-      </p>
-      <div class="cta-section">
-        <a class="btn-primary" href="https://energydirect.myambit.com/rates-and-plans/" target="_blank" rel="noopener">
-          See Plan Options
-        </a>
-      </div>
-    </div>
-
-    <!-- Card 8: FAQ accordion -->
-    <div class="card">
-      <h2>Frequently Asked Questions</h2>
-
-      <details class="accordion">
-        <summary>Will my lights go out when I switch providers?</summary>
-        <p>
-          Typically no. CenterPoint Energy continues electricity delivery while your new retail provider
-          begins service under the new plan.
-        </p>
-      </details>
-
-      <details class="accordion">
-        <summary>Who is the TDU in Houston?</summary>
-        <p>
-          CenterPoint Energy is the Transmission and Distribution Utility (TDU) for most of the Houston area.
-          They manage power lines, outages, and local delivery.
-        </p>
-      </details>
-
-      <details class="accordion">
-        <summary>What is an Electricity Facts Label (EFL)?</summary>
-        <p>
-          The EFL is a standardized document that lists average kWh prices at 500/1000/2000 kWh, contract length,
-          base or minimum usage charges, and renewable content for a plan.
-        </p>
-      </details>
-
-      <details class="accordion">
-        <summary>Do I need to cancel my old provider myself?</summary>
-        <p>
-          In many cases, your new provider coordinates the switch with CenterPoint as part of the enrollment process.
-          Always review your current contract terms to check for early termination fees before switching.
-        </p>
-      </details>
-    </div>
-  </main>
+    </section>
+  </div>
 
   <!-- Footer -->
-  <footer style="text-align:center; padding:1.5rem; background:rgba(0,0,0,0.05); font-size:.9rem;">
-    © 2025 EnergyDirect | Independent Ambit Energy Consultant
-    <div class="puct">PUCT#10117</div>
-    <div style="margin-top:1rem;">
-      <a href="/">Home</a> |
-      <a href="/houston/">Houston</a> |
-      <a href="/dallas/">Dallas</a> |
-      <a href="/corpus/">Corpus Christi</a> |
-      <a href="/victoria/">Victoria</a> |
-      <a href="/lubbock/">Lubbock</a> |
-      <a href="/texas/">Texas Hub</a> |
-      <a href="/abilene/">Abilene</a> |
-      <a href="/midland/">Midland</a> |
-      <a href="/odessa/">Odessa</a> |
-      <a href="/san-angelo/">San Angelo</a> |
-      <a href="/solar/">Solar Plans</a>
+  <footer>
+    © 2026 Energy Direct — Independent Ambit Energy Consultant · PUCT&nbsp;#10117 · <a href="tel:+13615829724">(361) 582-9724</a>
+    <div style="margin-top:.8rem;">
+      <a href="/">Home</a> | <a href="/houston/">Houston</a> | <a href="/dallas/">Dallas</a> |
+      <a href="/corpus/">Corpus Christi</a> | <a href="/victoria/">Victoria</a> | <a href="/lubbock/">Lubbock</a> |
+      <a href="/texas/">Texas Hub</a> | <a href="/abilene/">Abilene</a> | <a href="/midland/">Midland</a> |
+      <a href="/odessa/">Odessa</a> | <a href="/san-angelo/">San Angelo</a> | <a href="/solar/">Solar Plans</a>
     </div>
   </footer>
 
-  <!-- Single consolidated FAQPage schema: Houston -->
+  <!-- ===== Business-identity schema (item 4): Organization + WebSite + LocalBusiness ===== -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
+    "@graph":[
       {
-        "@type":"Question",
-        "name":"Who is responsible for outages in Houston?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"CenterPoint Energy manages outage response and delivery infrastructure in Houston, even if you switch retail electricity providers."
-        }
+        "@type":"Organization",
+        "@id":"https://energydirect.org/#org",
+        "name":"Energy Direct",
+        "description":"Local independent Ambit Energy consultant helping Texas homes and businesses compare and enroll in electricity plans.",
+        "url":"https://energydirect.org/",
+        "logo":"https://energydirect.org/images/ambit%20logo.png",
+        "telephone":"+1-361-582-9724",
+        "areaServed":["Houston, TX","Dallas, TX","Corpus Christi, TX","Victoria, TX","Texas"],
+        "sameAs":["https://www.facebook.com/energydirect.org"]
       },
       {
-        "@type":"Question",
-        "name":"Who handles power outages in Houston?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"CenterPoint Energy manages delivery and outage restoration in the Houston area. Retail providers manage billing and plan options."
-        }
+        "@type":"WebSite",
+        "@id":"https://energydirect.org/#website",
+        "name":"Energy Direct",
+        "url":"https://energydirect.org/",
+        "publisher":{"@id":"https://energydirect.org/#org"}
       },
       {
-        "@type":"Question",
-        "name":"Will my lights go out if I switch providers in Houston?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Switching providers typically does not interrupt service. CenterPoint continues electric delivery while your new provider begins billing under your new plan."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"What should I check in the Electricity Facts Label (EFL) for Houston plans?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Review the average price at 500, 1000, and 2000 kWh, any base or minimum usage charges, bill credit thresholds, contract length, early termination fees, and the plan’s renewable content."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"Can I choose a renewable electricity plan in Houston?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Many providers offer plans with renewable content in the CenterPoint Energy service area. Check the renewable percentage in each plan’s EFL."
-        }
-      },
-      {
-        "@type":"Question",
-        "name":"How do I compare electricity plans by ZIP code in Houston?",
-        "acceptedAnswer":{
-          "@type":"Answer",
-          "text":"Enter your service address or ZIP code on the provider’s enrollment site to see options specific to your location. Rates and plan availability can vary by ZIP and usage."
-        }
+        "@type":"LocalBusiness",
+        "@id":"https://energydirect.org/houston/#local",
+        "name":"Energy Direct — Houston",
+        "url":"https://energydirect.org/houston/",
+        "image":"https://energydirect.org/images/ambit%20logo.png",
+        "telephone":"+1-361-582-9724",
+        "parentOrganization":{"@id":"https://energydirect.org/#org"},
+        "address":{"@type":"PostalAddress","addressLocality":"Houston","addressRegion":"TX","addressCountry":"US"},
+        "areaServed":"Houston, Texas"
       }
     ]
   }
   </script>
 
-  <!-- LocalBusiness schema: Houston -->
+  <!-- FAQ schema: Houston -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": "https://energydirect.org/houston/#local",
-    "name": "EnergyDirect — Ambit Energy Independent Consultant",
-    "url": "https://energydirect.org/houston/",
-    "image": "https://energydirect.org/images/ambit%20logo.png",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Houston",
-      "addressRegion": "TX",
-      "addressCountry": "US"
-    },
-    "areaServed": "Houston, Texas",
-    "sameAs": [
-      "https://energydirect.org/texas/electricity-glossary/",
-      "https://energydirect.org/texas/electricity-facts-label/",
-      "https://energydirect.org/houston/compare-ambit-plans-by-zip/"
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"Will my lights go out if I switch providers in Houston?","acceptedAnswer":{"@type":"Answer","text":"Switching plans typically does not interrupt service. CenterPoint continues electric delivery while your new plan begins billing."}},
+      {"@type":"Question","name":"Who is the TDU in Houston?","acceptedAnswer":{"@type":"Answer","text":"CenterPoint Energy is the Transmission and Distribution Utility for most of the Houston area, managing lines, outages, and delivery."}},
+      {"@type":"Question","name":"How do I compare electricity rates by ZIP code in Houston?","acceptedAnswer":{"@type":"Answer","text":"Enter your service address or ZIP code on the plans page to see options for your location. Rates and availability vary by ZIP and usage."}},
+      {"@type":"Question","name":"Can I choose a renewable electricity plan in Houston?","acceptedAnswer":{"@type":"Answer","text":"Many plans in the CenterPoint Energy service area include renewable content. Check the renewable percentage on each plan's EFL."}}
     ]
   }
   </script>
 
-  <!-- Chatbase AI widget -->
-  <script>
-  (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="q3jbqwMknA-qsuvShLBBX";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-  </script>
 </body>
 </html>
