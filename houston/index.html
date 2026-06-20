@@ -9,9 +9,9 @@
   <link rel="icon" type="image/png" href="/energydirect-site-staging/favicon.png" />
   <link rel="stylesheet" href="/energydirect-site-staging/style.css" />
   <style>
-    body { background:#f7f8fa; color:#1e293b; font-size:1.08rem; line-height:1.72; }
+    body { background:#f7f8fa; color:#1e293b; font-size:1.18rem; line-height:1.7; -webkit-text-size-adjust:100%; }
     .wrap { max-width:1100px; margin:0 auto; padding:0 1rem; }
-    p { font-size:1.06rem; }
+    p { font-size:1.13rem; }
 
     /* Utility top bar with phone */
     .util-bar {
@@ -43,6 +43,24 @@
     .btn-primary:hover { background:#1d4ed8; }
     .btn-ghost { background:rgba(255,255,255,.15); color:#fff !important; border:1.5px solid rgba(255,255,255,.7); }
     .btn-ghost:hover { background:rgba(255,255,255,.28); }
+
+    /* ZIP conversion form (primary action) */
+    .zipform { display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap; max-width:580px; margin:1.5rem auto .4rem; }
+    .zipform input { flex:1 1 230px; min-width:0; padding:1.05rem 1.1rem; border-radius:12px; border:0; font-size:1.18rem; color:#0f172a; box-shadow:0 6px 18px rgba(0,0,0,.18); }
+    .zipform button { padding:1.05rem 1.7rem; border-radius:12px; border:0; background:#16a34a; color:#fff; font-weight:800; font-size:1.15rem; cursor:pointer; box-shadow:0 6px 18px rgba(22,163,74,.5); }
+    .zipform button:hover { background:#15803d; }
+    .cta-band .zipform input { box-shadow:none; }
+    .hero .subcall { display:block; margin:.5rem auto 0; font-size:1.02rem; opacity:.95; }
+    .hero .subcall a { color:#fff; font-weight:800; }
+
+    /* numbered 3-step strip */
+    .steps3 { background:#fff; border-bottom:1px solid #e5e7eb; }
+    .steps3 .wrap { display:grid; gap:16px; grid-template-columns:1fr; padding:1.5rem 1rem; }
+    @media(min-width:760px){ .steps3 .wrap{ grid-template-columns:repeat(3,1fr); } }
+    .step { display:flex; gap:.85rem; align-items:flex-start; }
+    .step .n { flex:0 0 auto; width:40px; height:40px; border-radius:50%; background:#2563eb; color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
+    .step h4 { margin:.1rem 0 .2rem; font-size:1.18rem; }
+    .step p { margin:0; font-size:1.02rem; color:#475569; }
 
     /* Trust strip */
     .trust { background:#fff; border-bottom:1px solid #e5e7eb; }
@@ -103,16 +121,26 @@
   <!-- Hero -->
   <header class="hero">
     <div class="eyebrow">Houston &amp; CenterPoint Energy Service Area</div>
-    <h1>Houston Electricity Rates, Compared Plainly</h1>
+    <h1>Compare Houston Electricity Rates by ZIP</h1>
     <p class="lede">
-      Energy Direct is your local guide to choosing a Houston electricity plan. Enter your ZIP,
-      compare real plans on the Electricity Facts Label, and enroll with a person you can actually call.
+      See the electricity plans available at your Houston address, compare the rate on each
+      Electricity Facts Label, and enroll online in minutes.
     </p>
-    <div class="hero-cta">
-      <a class="btn btn-primary" href="https://energydirect.myambit.com/rates-and-plans/" target="_blank" rel="noopener">View Plans &amp; Enroll</a>
-      <a class="btn btn-ghost" href="tel:+13615829724">Talk to a Local Consultant</a>
-    </div>
+    <form class="zipform" action="https://energydirect.myambit.com/rates-and-plans/" method="get" target="_blank" rel="noopener">
+      <input type="text" name="zipcode" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Enter your ZIP code" aria-label="ZIP code" required />
+      <button type="submit">See Plans &amp; Rates →</button>
+    </form>
+    <span class="subcall">Want a hand choosing? Call or text <a href="tel:+13615829724">(361) 582-9724</a> — free, no pressure.</span>
   </header>
+
+  <!-- 3 clear steps: what to do on this page -->
+  <section class="steps3">
+    <div class="wrap">
+      <div class="step"><div class="n">1</div><div><h4>Enter your ZIP</h4><p>See the plans actually available at your Houston address.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h4>Compare the rate</h4><p>Check the price per kWh on each plan's Electricity Facts Label.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h4>Enroll online</h4><p>Choose your plan and sign up in minutes. No call required.</p></div></div>
+    </div>
+  </section>
 
   <!-- Trust strip -->
   <div class="trust">
@@ -201,9 +229,12 @@
 
     <!-- Mid CTA band -->
     <div class="cta-band">
-      <h2>Not sure which Houston plan fits?</h2>
-      <p>Skip the guesswork. A local consultant will walk your ZIP and usage with you, free.</p>
-      <a class="btn btn-primary" href="tel:+13615829724">Call (361) 582-9724</a>
+      <h2>Ready to see your Houston plans?</h2>
+      <p>Enter your ZIP to compare rates and enroll online. Prefer to talk it through? Call or text (361) 582-9724.</p>
+      <form class="zipform" action="https://energydirect.myambit.com/rates-and-plans/" method="get" target="_blank" rel="noopener">
+        <input type="text" name="zipcode" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Enter your ZIP code" aria-label="ZIP code" required />
+        <button type="submit">See Plans &amp; Rates →</button>
+      </form>
     </div>
 
     <!-- More detail -->
