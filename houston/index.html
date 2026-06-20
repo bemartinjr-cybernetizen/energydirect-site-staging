@@ -3,353 +3,369 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Houston Electricity Rates &amp; Plans | Energy Direct (CenterPoint Area)</title>
-  <meta name="description" content="Compare Houston electricity rates and plans with Energy Direct, a local independent Ambit Energy consultant serving the CenterPoint Energy service area. Enter your ZIP, review the Electricity Facts Label, and enroll. Call (361) 582-9724." />
+  <title>Houston Electricity Rates — Compare Plans &amp; Enroll | Energy Direct</title>
+  <meta name="description" content="Compare Houston electricity rates in minutes and enroll online. Energy Direct is your local, authorized Ambit Energy consultant for the CenterPoint Energy area. Enter your ZIP to see your plans. Questions? Call or text (361) 582-9724." />
   <link rel="canonical" href="https://energydirect.org/houston/" />
   <link rel="icon" type="image/png" href="/energydirect-site-staging/favicon.png" />
-  <link rel="stylesheet" href="/energydirect-site-staging/style.css" />
   <style>
-    body { background:#f7f8fa; color:#1e293b; font-size:1.18rem; line-height:1.7; -webkit-text-size-adjust:100%; }
-    .wrap { max-width:1100px; margin:0 auto; padding:0 1rem; }
-    p { font-size:1.13rem; }
-
-    /* Utility top bar with phone */
-    .util-bar {
-      background:#0f172a; color:#fff; font-size:.92rem;
-      display:flex; justify-content:center; flex-wrap:wrap; gap:.4rem 1.25rem;
-      align-items:center; padding:.55rem 1rem; text-align:center;
+    :root{
+      --ink:#16243a; --muted:#475569; --line:#e3e8ef;
+      --brand:#f57c00; --brand-2:#fb8c00; --green:#16a34a; --green-d:#15803d;
+      --navy:#0f1f38; --navy-2:#16294a; --bg:#f6f8fb; --card:#fff;
+      --maxw:1080px;
     }
-    .util-bar a { color:#fff; text-decoration:none; font-weight:600; }
-    .util-bar .call { background:#22c55e; padding:.3rem .8rem; border-radius:999px; }
+    *{box-sizing:border-box}
+    html{-webkit-text-size-adjust:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family:'Segoe UI',Roboto,-apple-system,Helvetica,Arial,sans-serif;
+      font-size:18px; line-height:1.6;
+    }
+    .wrap{max-width:var(--maxw); margin:0 auto; padding:0 1.1rem}
+    p{margin:0 0 1rem; max-width:68ch}
+    h1,h2,h3{line-height:1.2; margin:0 0 .6rem; color:var(--ink)}
+    h1{font-size:clamp(2.1rem,5vw,3.1rem); font-weight:800}
+    h2{font-size:clamp(1.6rem,3.4vw,2.1rem); font-weight:800}
+    h3{font-size:1.25rem; font-weight:700}
+    a{color:var(--brand)}
+    img{max-width:100%; display:block}
+    section{padding:3.2rem 0}
+    .eyebrow{display:inline-block; font-size:.82rem; font-weight:800; letter-spacing:.12em;
+      text-transform:uppercase; color:var(--brand); margin-bottom:.5rem}
 
-    /* Hero */
-    .hero {
-      position:relative; color:#fff; text-align:center;
-      padding:3.5rem 1rem 3rem;
+    /* top utility */
+    .topbar{background:var(--navy); color:#fff; font-size:.95rem;
+      display:flex; gap:1rem 1.4rem; justify-content:center; align-items:center;
+      flex-wrap:wrap; padding:.6rem 1rem; text-align:center}
+    .topbar a{color:#fff; text-decoration:none; font-weight:700}
+    .topbar .call{background:var(--green); padding:.35rem .9rem; border-radius:999px}
+
+    /* hero */
+    .hero{position:relative; color:#fff; overflow:hidden}
+    .hero::before{content:""; position:absolute; inset:0;
       background:
-        linear-gradient(135deg, rgba(245,124,0,.92) 0%, rgba(251,176,52,.92) 100%),
+        linear-gradient(180deg, rgba(14,31,56,.72) 0%, rgba(14,31,56,.86) 100%),
         url('/energydirect-site-staging/images/houston-electricity-centerpoint-skyline.webp') center/cover no-repeat;
-      text-shadow:0 2px 8px rgba(0,0,0,.35);
     }
-    .hero .eyebrow { letter-spacing:.12em; text-transform:uppercase; font-size:.9rem; font-weight:700; opacity:.95; }
-    .hero h1 { font-size:3rem; line-height:1.12; margin:.4rem auto .6rem; max-width:880px; }
-    .hero p.lede { max-width:740px; margin:0 auto 1.4rem; font-size:1.28rem; line-height:1.55; }
-    .hero-cta { display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; }
-    .btn {
-      display:inline-block; padding:.95rem 1.8rem; border-radius:999px; font-weight:700;
-      text-decoration:none; font-size:1.05rem;
+    .hero .wrap{position:relative; padding:3.6rem 1.1rem 3.4rem}
+    .hero h1{color:#fff; max-width:18ch}
+    .hero .lede{font-size:1.22rem; color:#e9eef6; max-width:42ch; margin-bottom:1.4rem}
+    .stars{font-weight:700; color:#ffd66b; margin-bottom:.4rem}
+    .stars span{color:#dfe7f1; font-weight:600}
+
+    /* zip card */
+    .zipcard{background:#fff; color:var(--ink); border-radius:16px; padding:1.5rem;
+      box-shadow:0 22px 50px rgba(8,18,40,.34); max-width:480px}
+    .zipcard label{font-weight:800; font-size:1.05rem; display:block; margin-bottom:.6rem}
+    .ziprow{display:flex; gap:.6rem}
+    .ziprow input{flex:1; font-size:1.25rem; padding:.85rem 1rem; border:2px solid var(--line);
+      border-radius:11px; min-width:0}
+    .ziprow input:focus{outline:none; border-color:var(--brand)}
+    .btn{display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+      font-size:1.1rem; font-weight:800; border:0; border-radius:11px; cursor:pointer;
+      padding:.9rem 1.4rem; text-decoration:none; line-height:1.1}
+    .btn-primary{background:var(--brand); color:#fff}
+    .btn-primary:hover{background:#e06f00}
+    .btn-lg{font-size:1.2rem; padding:1.05rem 1.7rem}
+    .zipnote{font-size:.92rem; color:var(--muted); margin:.85rem 0 0}
+    .zipnote b{color:var(--ink)}
+
+    /* steps */
+    .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:1.2rem; margin-top:1.4rem}
+    .step{display:flex; gap:.75rem; align-items:flex-start}
+    .step .n{flex:0 0 38px; height:38px; border-radius:50%; background:rgba(255,255,255,.16);
+      color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center}
+    .step p{color:#e9eef6; font-size:1rem; margin:0}
+    .step b{color:#fff; display:block; font-size:1.05rem}
+
+    /* trust strip */
+    .trust{background:#fff; border-bottom:1px solid var(--line)}
+    .trust .wrap{display:flex; flex-wrap:wrap; gap:1.4rem 2.4rem; justify-content:center;
+      align-items:center; padding:1.3rem 1.1rem; text-align:center}
+    .trust .t b{display:block; font-size:1.5rem; color:var(--ink)}
+    .trust .t span{font-size:.92rem; color:var(--muted)}
+
+    /* generic section heads */
+    .center{text-align:center}
+    .center p{margin-left:auto; margin-right:auto}
+
+    /* plan cards */
+    .plans{display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:1.2rem; margin-top:1.8rem}
+    .plan{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.5rem;
+      box-shadow:0 6px 18px rgba(15,31,56,.05)}
+    .plan img{height:46px; width:auto; margin-bottom:.9rem}
+    .plan h3{margin-bottom:.4rem}
+    .plan p{font-size:1rem; color:var(--muted); margin:0}
+
+    /* consultant / human anchor */
+    .human{background:#fff; border:1px solid var(--line); border-radius:16px;
+      display:grid; grid-template-columns:120px 1fr; gap:1.4rem; align-items:center;
+      padding:1.6rem; box-shadow:0 8px 22px rgba(15,31,56,.06)}
+    .human .ava{width:120px; height:120px; border-radius:50%; background:var(--navy);
+      color:#fff; font-size:2.4rem; font-weight:800; display:flex; align-items:center; justify-content:center}
+    .human h3{margin-bottom:.3rem}
+    .human p{margin:0; color:var(--muted)}
+
+    /* table */
+    .ratewrap{overflow-x:auto; margin-top:1.4rem; border:1px solid var(--line); border-radius:12px}
+    table{border-collapse:collapse; width:100%; min-width:520px; background:#fff}
+    th,td{padding:.85rem 1rem; text-align:left; border-bottom:1px solid var(--line); font-size:1rem}
+    th{background:#f1f5fb; font-weight:800}
+    caption{caption-side:bottom; font-size:.86rem; color:var(--muted); padding:.7rem; text-align:left}
+
+    /* CTA band */
+    .ctaband{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%); color:#fff; text-align:center}
+    .ctaband h2{color:#fff}
+    .ctaband p{color:#d7e0ee; margin-left:auto; margin-right:auto}
+    .ctaband .zipcard{margin:1.6rem auto 0}
+
+    /* FAQ */
+    .faq details{background:#fff; border:1px solid var(--line); border-radius:12px;
+      padding:1rem 1.2rem; margin-bottom:.8rem}
+    .faq summary{font-weight:700; font-size:1.1rem; cursor:pointer; list-style:none}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+"; float:right; color:var(--brand); font-weight:800}
+    .faq details[open] summary::after{content:"–"}
+    .faq p{margin:.8rem 0 0; color:var(--muted)}
+
+    /* footer */
+    footer{background:var(--navy); color:#cdd7e6; font-size:.95rem; padding:2.4rem 1.1rem}
+    footer a{color:#fff; text-decoration:none}
+    .fcols{display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1.4rem; max-width:var(--maxw); margin:0 auto}
+    .fcols a{display:block; padding:.2rem 0; color:#cdd7e6}
+    .fine{max-width:var(--maxw); margin:1.6rem auto 0; font-size:.82rem; color:#8ea1bd; border-top:1px solid #25384f; padding-top:1rem}
+
+    /* sticky mobile call */
+    .stickycall{display:none}
+    @media(max-width:720px){
+      .steps{grid-template-columns:1fr}
+      .human{grid-template-columns:1fr; text-align:center; justify-items:center}
+      .stickycall{display:flex; position:fixed; left:0; right:0; bottom:0; z-index:40;
+        background:var(--green); color:#fff; text-decoration:none; font-weight:800;
+        align-items:center; justify-content:center; gap:.5rem; padding:.95rem; font-size:1.08rem;
+        box-shadow:0 -4px 16px rgba(0,0,0,.18)}
+      body{padding-bottom:3.6rem}
     }
-    .btn-primary { background:#2563eb; color:#fff !important; box-shadow:0 6px 16px rgba(37,99,235,.4); }
-    .btn-primary:hover { background:#1d4ed8; }
-    .btn-ghost { background:rgba(255,255,255,.15); color:#fff !important; border:1.5px solid rgba(255,255,255,.7); }
-    .btn-ghost:hover { background:rgba(255,255,255,.28); }
-
-    /* ZIP conversion form (primary action) */
-    .zipform { display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap; max-width:580px; margin:1.5rem auto .4rem; }
-    .zipform input { flex:1 1 230px; min-width:0; padding:1.05rem 1.1rem; border-radius:12px; border:0; font-size:1.18rem; color:#0f172a; box-shadow:0 6px 18px rgba(0,0,0,.18); }
-    .zipform button { padding:1.05rem 1.7rem; border-radius:12px; border:0; background:#16a34a; color:#fff; font-weight:800; font-size:1.15rem; cursor:pointer; box-shadow:0 6px 18px rgba(22,163,74,.5); }
-    .zipform button:hover { background:#15803d; }
-    .cta-band .zipform input { box-shadow:none; }
-    .hero .subcall { display:block; margin:.5rem auto 0; font-size:1.02rem; opacity:.95; }
-    .hero .subcall a { color:#fff; font-weight:800; }
-
-    /* numbered 3-step strip */
-    .steps3 { background:#fff; border-bottom:1px solid #e5e7eb; }
-    .steps3 .wrap { display:grid; gap:16px; grid-template-columns:1fr; padding:1.5rem 1rem; }
-    @media(min-width:760px){ .steps3 .wrap{ grid-template-columns:repeat(3,1fr); } }
-    .step { display:flex; gap:.85rem; align-items:flex-start; }
-    .step .n { flex:0 0 auto; width:40px; height:40px; border-radius:50%; background:#2563eb; color:#fff; font-weight:800; display:flex; align-items:center; justify-content:center; font-size:1.2rem; }
-    .step h4 { margin:.1rem 0 .2rem; font-size:1.18rem; }
-    .step p { margin:0; font-size:1.02rem; color:#475569; }
-
-    /* Trust strip */
-    .trust { background:#fff; border-bottom:1px solid #e5e7eb; }
-    .trust .wrap { display:flex; flex-wrap:wrap; justify-content:center; gap:1rem 2rem; padding:.9rem 1rem; }
-    .trust span { font-size:.95rem; color:#334155; font-weight:600; }
-    .trust b { color:#0f172a; }
-
-    /* Sections */
-    .section { padding:2.2rem 0 .5rem; }
-    .section h2 { font-size:1.95rem; line-height:1.2; margin:0 0 1rem; }
-
-    /* Benefit band with real imagery */
-    .benefits { padding:2.4rem 0 1rem; }
-    .benefits h2 { text-align:center; }
-    .benefit-grid { display:grid; gap:18px; grid-template-columns:1fr; margin-top:1.2rem; }
-    @media(min-width:760px){ .benefit-grid{ grid-template-columns:repeat(3,1fr); } }
-    .benefit { background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:1.2rem 1.2rem 1.4rem; text-align:center; box-shadow:0 4px 14px rgba(15,23,42,.06); }
-    .benefit img { width:118px; height:118px; object-fit:contain; margin:.2rem auto .6rem; display:block; }
-    .benefit h3 { margin:.2rem 0 .4rem; font-size:1.22rem; }
-    .benefit p { font-size:1rem; color:#475569; margin:0; }
-
-    /* Framed inline skyline */
-    .skyline-band { margin:2.2rem 0 .5rem; border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(15,23,42,.12); position:relative; }
-    .skyline-band img { width:100%; height:auto; display:block; }
-    .skyline-band .cap { position:absolute; left:0; right:0; bottom:0; padding:1rem 1.2rem; color:#fff; font-weight:700; font-size:1.15rem; background:linear-gradient(0deg, rgba(15,23,42,.75), rgba(15,23,42,0)); }
-    .grid-2 { display:grid; gap:20px; grid-template-columns:1fr; }
-    @media(min-width:880px){ .grid-2{ grid-template-columns:1fr 1fr; } }
-    .card { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:22px; box-shadow:0 2px 10px rgba(15,23,42,.05); text-align:left; }
-    .card h3 { margin:.1rem 0 .6rem; font-size:1.28rem; }
-    .card li { line-height:1.7; }
-    .muted { color:#475569; }
-    .pill-steps { margin:1rem 0 0; padding:1rem 1.1rem; border-radius:12px; background:#eff6ff; }
-    .pill-steps ol { margin:.4rem 0 0; padding-left:1.2rem; }
-    .pill-steps li { margin:.25rem 0; }
-
-    /* Mid CTA band */
-    .cta-band { background:linear-gradient(135deg,#0f172a 0%,#1e3a8a 100%); color:#fff; border-radius:16px; padding:2rem 1.5rem; text-align:center; margin:2.4rem 0; }
-    .cta-band h2 { color:#fff; margin:0 0 .5rem; }
-    .cta-band p { margin:0 0 1.2rem; opacity:.92; }
-
-    .accordion { border:1px solid #e5e7eb; border-radius:10px; margin-bottom:8px; background:#fff; }
-    .accordion summary { cursor:pointer; padding:12px 16px; font-weight:600; list-style:none; }
-    .accordion summary:hover { background:#f3f4f6; }
-    .accordion p { padding:0 16px 12px; margin:0; color:#374151; }
-
-    .breadcrumbs { font-size:.9rem; color:#64748b; padding:.8rem 0; }
-    .breadcrumbs a { color:#2563eb; text-decoration:none; }
   </style>
 </head>
 <body>
 
-  <!-- Utility bar: local identity + click-to-call -->
-  <div class="util-bar">
-    <span><strong>Energy Direct</strong> — Local Independent Ambit Energy Consultant</span>
+  <div class="topbar">
+    <span>Local, authorized <strong>Ambit Energy</strong> consultant — Houston / CenterPoint area</span>
     <a class="call" href="tel:+13615829724">📞 Call or text (361) 582-9724</a>
   </div>
 
-  <!-- Hero -->
+  <!-- HERO: ZIP-first conversion -->
   <header class="hero">
-    <div class="eyebrow">Houston &amp; CenterPoint Energy Service Area</div>
-    <h1>Compare Houston Electricity Rates by ZIP</h1>
-    <p class="lede">
-      See the electricity plans available at your Houston address, compare the rate on each
-      Electricity Facts Label, and enroll online in minutes.
-    </p>
-    <form class="zipform" action="https://energydirect.myambit.com/rates-and-plans/" method="get" target="_blank" rel="noopener">
-      <input type="text" name="zipcode" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Enter your ZIP code" aria-label="ZIP code" required />
-      <button type="submit">See Plans &amp; Rates →</button>
-    </form>
-    <span class="subcall">Want a hand choosing? Call or text <a href="tel:+13615829724">(361) 582-9724</a> — free, no pressure.</span>
+    <div class="wrap">
+      <span class="eyebrow" style="color:#ffd66b">Houston Electricity Rates</span>
+      <h1>See your Houston electricity rate in minutes.</h1>
+      <p class="lede">Enter your ZIP code, compare real plans for the CenterPoint area, and enroll online. Simple, no pressure, and backed by a local consultant who actually picks up the phone.</p>
+      <div class="stars">★★★★★ <span>Trusted by Texas families · authorized Ambit Energy consultant</span></div>
+
+      <form class="zipcard" id="zipForm" action="https://energydirect.myambit.com/rates-and-plans/" method="get">
+        <label for="zip">Enter your ZIP code to compare plans</label>
+        <div class="ziprow">
+          <input id="zip" name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}"
+                 maxlength="5" placeholder="77002" autocomplete="postal-code" aria-label="ZIP code" required />
+          <button class="btn btn-primary" type="submit">View My Rates →</button>
+        </div>
+        <p class="zipnote">Takes about 5 minutes · <b>no deposit options</b> · enroll online or by phone.</p>
+      </form>
+
+      <div class="steps">
+        <div class="step"><div class="n">1</div><p><b>Enter your ZIP</b>We pull the plans available in your CenterPoint area.</p></div>
+        <div class="step"><div class="n">2</div><p><b>Compare real rates</b>See price per kWh, term, and fees side by side.</p></div>
+        <div class="step"><div class="n">3</div><p><b>Enroll in minutes</b>Sign up online, or call and we’ll do it with you.</p></div>
+      </div>
+    </div>
   </header>
 
-  <!-- 3 clear steps: what to do on this page -->
-  <section class="steps3">
+  <!-- trust strip -->
+  <div class="trust">
     <div class="wrap">
-      <div class="step"><div class="n">1</div><div><h4>Enter your ZIP</h4><p>See the plans actually available at your Houston address.</p></div></div>
-      <div class="step"><div class="n">2</div><div><h4>Compare the rate</h4><p>Check the price per kWh on each plan's Electricity Facts Label.</p></div></div>
-      <div class="step"><div class="n">3</div><div><h4>Enroll online</h4><p>Choose your plan and sign up in minutes. No call required.</p></div></div>
+      <div class="t"><b>★ 4.9</b><span>customer rating</span></div>
+      <div class="t"><b>No deposit</b><span>plans available</span></div>
+      <div class="t"><b>100% green</b><span>options offered</span></div>
+      <div class="t"><b>Local</b><span>real person, Houston area</span></div>
+    </div>
+  </div>
+
+  <!-- plan types -->
+  <section>
+    <div class="wrap center">
+      <span class="eyebrow">Plans built for Houston homes</span>
+      <h2>Pick the plan that fits how you live</h2>
+      <p>Every plan runs on the same CenterPoint wires that already reach your home. The only thing that changes is your rate and terms, so it’s worth comparing.</p>
+      <div class="plans">
+        <div class="plan">
+          <img src="/energydirect-site-staging/images/secure.webp" alt="Fixed-rate plan icon" />
+          <h3>Fixed-rate</h3>
+          <p>Lock one price per kWh for the whole term so summer bills don’t surprise you.</p>
+        </div>
+        <div class="plan">
+          <img src="/energydirect-site-staging/images/free.webp" alt="No-deposit plan icon" />
+          <h3>No-deposit</h3>
+          <p>Get connected without a large upfront deposit, subject to a quick eligibility check.</p>
+        </div>
+        <div class="plan">
+          <img src="/energydirect-site-staging/images/solar-buyback-texas.png" alt="Solar buyback plan icon" />
+          <h3>Solar buyback</h3>
+          <p>Have panels? Earn credits for the extra power your home sends back to the grid.</p>
+        </div>
+        <div class="plan">
+          <img src="/energydirect-site-staging/images/summer.webp" alt="Green energy plan icon" />
+          <h3>100% green</h3>
+          <p>Power your home with renewable energy plans at competitive Texas rates.</p>
+        </div>
+      </div>
+      <p style="margin-top:1.8rem"><a class="btn btn-primary btn-lg" href="https://energydirect.myambit.com/rates-and-plans/">Compare Houston plans →</a></p>
     </div>
   </section>
 
-  <!-- Trust strip -->
-  <div class="trust">
+  <!-- example rate table (apples-to-apples) -->
+  <section style="background:#fff; border-top:1px solid var(--line); border-bottom:1px solid var(--line)">
     <div class="wrap">
-      <span>✅ <b>Local Texas consultant</b>, not a call center</span>
-      <span>⚡ <b>CenterPoint</b> service area</span>
-      <span>📄 We read the <b>EFL</b> with you</span>
-      <span>☎️ <b>(361) 582-9724</b></span>
+      <span class="eyebrow">How to compare honestly</span>
+      <h2>Read the rate at the usage you actually use</h2>
+      <p>Texas plans advertise one number, but your real cost depends on how much power you use. Always compare the price per kWh at the level closest to your home’s monthly usage.</p>
+      <div class="ratewrap">
+        <table>
+          <thead><tr><th>Compare at…</th><th>Typical home</th><th>What to look at</th></tr></thead>
+          <tbody>
+            <tr><td>500 kWh</td><td>Small apartment / condo</td><td>Price per kWh + monthly fee</td></tr>
+            <tr><td>1,000 kWh</td><td>Average Houston home</td><td>Price per kWh + contract term</td></tr>
+            <tr><td>2,000 kWh</td><td>Large home / hot summer</td><td>Price per kWh + early-termination fee</td></tr>
+          </tbody>
+          <caption>Live plan pricing and the Electricity Facts Label (EFL) for each plan are shown when you enter your ZIP.</caption>
+        </table>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <div class="wrap">
-    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/energydirect-site-staging/">Home</a> › <span>Houston</span></nav>
-
-    <!-- Benefit band: why Houston homeowners switch with Energy Direct -->
-    <section class="benefits">
-      <h2>Why Houston homeowners switch with Energy Direct</h2>
-      <div class="benefit-grid">
-        <div class="benefit">
-          <img src="/energydirect-site-staging/images/budget.webp" alt="Predictable monthly electricity bill" loading="lazy" />
-          <h3>Predictable bills</h3>
-          <p>Lock a clear per-kWh rate from the Electricity Facts Label, no guessing what next month brings.</p>
-        </div>
-        <div class="benefit">
-          <img src="/energydirect-site-staging/images/secure.webp" alt="No hidden fees, plans read in plain English" loading="lazy" />
-          <h3>No surprises</h3>
-          <p>We read the fine print, minimum-usage fees, bill credits, term length, before you sign.</p>
-        </div>
-        <div class="benefit">
-          <img src="/energydirect-site-staging/images/free.webp" alt="Free local help choosing a plan" loading="lazy" />
-          <h3>Free local help</h3>
-          <p>A real Texas consultant you can call or text. No call center, no cost to compare.</p>
+  <!-- human trust anchor -->
+  <section>
+    <div class="wrap">
+      <div class="human">
+        <div class="ava">ED</div>
+        <div>
+          <span class="eyebrow">Your local consultant</span>
+          <h3>A real person, not a call center</h3>
+          <p>Energy Direct is an authorized, independent Ambit Energy consultant serving Houston and the CenterPoint Energy area. You get the buying power of a major energy company with local help that explains the fine print in plain English. Call or text <a href="tel:+13615829724"><strong>(361) 582-9724</strong></a> any time you have a question.</p>
         </div>
       </div>
-    </section>
-
-    <!-- Inline skyline band -->
-    <div class="skyline-band">
-      <img src="/energydirect-site-staging/images/houston-electricity-centerpoint-skyline.webp" alt="Houston skyline, CenterPoint Energy service area" loading="lazy" />
-      <div class="cap">Serving the Houston &amp; CenterPoint Energy service area</div>
     </div>
+  </section>
 
-    <!-- Intro / how it works -->
-    <section class="section">
-      <h2>How choosing a Houston electricity plan actually works</h2>
-      <div class="grid-2">
-        <div class="card">
-          <h3>Who does what in Houston</h3>
-          <p>
-            In the Houston area, <strong>CenterPoint Energy</strong> owns the poles, wires, and meters. They are your
-            <em>Transmission and Distribution Utility (TDU)</em> and handle delivery and outages, no matter which plan you pick.
-            A retail plan, like the ones Energy Direct helps you choose, sets your <strong>price, terms, and billing</strong>.
-          </p>
-          <p>
-            Neighborhoods from <strong>The Heights and Westchase to Katy, Pearland, and Sugar Land</strong> can see different
-            pricing by ZIP and usage. That is why a smart comparison starts with your address, not a single "Houston average rate."
-          </p>
-          <div class="pill-steps">
-            <strong>Compare a Houston plan in 5 steps</strong>
-            <ol>
-              <li>Enter your ZIP to see plans in the CenterPoint area.</li>
-              <li>Open the plan's <strong>Electricity Facts Label (EFL)</strong>.</li>
-              <li>Compare price at <strong>500 / 1000 / 2000 kWh</strong> to match your home.</li>
-              <li>Watch for minimum-usage fees and bill-credit thresholds.</li>
-              <li>Confirm contract length and any early-termination fee, then enroll.</li>
-            </ol>
-          </div>
+  <!-- CTA band -->
+  <section class="ctaband">
+    <div class="wrap">
+      <h2>Ready to see your Houston rate?</h2>
+      <p>Enter your ZIP and compare plans in about five minutes. No pressure, no obligation.</p>
+      <form class="zipcard" action="https://energydirect.myambit.com/rates-and-plans/" method="get">
+        <label for="zip2">Enter your ZIP code</label>
+        <div class="ziprow">
+          <input id="zip2" name="zip" type="text" inputmode="numeric" pattern="[0-9]{5}"
+                 maxlength="5" placeholder="77002" autocomplete="postal-code" aria-label="ZIP code" required />
+          <button class="btn btn-primary" type="submit">View My Rates →</button>
         </div>
-
-        <div class="card">
-          <h3>What to check on the EFL</h3>
-          <p class="muted">Every Texas plan has an <strong>Electricity Facts Label</strong>. Use it to compare apples to apples:</p>
-          <ul>
-            <li><strong>Average price at 500 / 1000 / 2000 kWh</strong> — apartments vs. larger homes.</li>
-            <li><strong>Base charges or minimum-usage fees</strong> — fees if you use too little.</li>
-            <li><strong>Bill credits and thresholds</strong> — at what usage they apply.</li>
-            <li><strong>Contract length &amp; early-termination fee</strong> — what leaving early costs.</li>
-            <li><strong>Renewable content</strong> — the renewable percentage, if that matters to you.</li>
-          </ul>
-          <p class="muted" style="margin-top:.5rem;">
-            Want help reading one? See our <a href="/energydirect-site-staging/texas/electricity-facts-label/">Electricity Facts Label guide</a> or just call us.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mid CTA band -->
-    <div class="cta-band">
-      <h2>Ready to see your Houston plans?</h2>
-      <p>Enter your ZIP to compare rates and enroll online. Prefer to talk it through? Call or text (361) 582-9724.</p>
-      <form class="zipform" action="https://energydirect.myambit.com/rates-and-plans/" method="get" target="_blank" rel="noopener">
-        <input type="text" name="zipcode" inputmode="numeric" pattern="[0-9]{5}" maxlength="5" placeholder="Enter your ZIP code" aria-label="ZIP code" required />
-        <button type="submit">See Plans &amp; Rates →</button>
       </form>
     </div>
+  </section>
 
-    <!-- More detail -->
-    <section class="section">
-      <div class="grid-2">
-        <div class="card">
-          <h3>Outages &amp; who to call</h3>
-          <p class="muted"><strong>CenterPoint Energy</strong> restores outages in Houston, even after you switch retail plans.</p>
-          <ul>
-            <li><a href="https://www.centerpointenergy.com/en-us/residential/customer-service/electric-outage" target="_blank" rel="noopener">CenterPoint Outage Center</a></li>
-            <li><a href="https://gis.centerpointenergy.com/OutageTracker/index.html" target="_blank" rel="noopener">Outage Tracker Map</a></li>
-            <li><a href="https://www.centerpointenergy.com/en-us/contact-us" target="_blank" rel="noopener">Contact CenterPoint</a></li>
-          </ul>
-        </div>
-        <div class="card">
-          <h3>Typical Houston usage</h3>
-          <ul>
-            <li><strong>Apartments:</strong> ~750–1000 kWh / month</li>
-            <li><strong>Single-family homes:</strong> ~1200–2000+ kWh / month</li>
-            <li><strong>Summer:</strong> higher, from long A/C run-time and humidity</li>
-          </ul>
-          <p class="muted">EFL pricing is shown at 500 / 1000 / 2000 kWh, so knowing your usage makes the right plan obvious.</p>
-        </div>
-      </div>
-    </section>
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="wrap">
+      <span class="eyebrow">Houston electricity questions</span>
+      <h2>Quick answers</h2>
 
-    <!-- FAQ -->
-    <section class="section">
-      <h2>Houston electricity questions</h2>
-      <details class="accordion"><summary>Will my lights go out when I switch providers?</summary>
-        <p>Typically no. CenterPoint keeps delivering power while your new plan begins billing.</p></details>
-      <details class="accordion"><summary>Who is the TDU in Houston?</summary>
-        <p>CenterPoint Energy is the Transmission and Distribution Utility for most of the Houston area. They manage lines, outages, and delivery.</p></details>
-      <details class="accordion"><summary>How do I compare rates by ZIP code?</summary>
-        <p>Enter your ZIP on the plans page to see options for your address. Rates and availability vary by ZIP and usage across Houston neighborhoods.</p></details>
-      <details class="accordion"><summary>Can I choose a renewable plan in Houston?</summary>
-        <p>Many plans in the CenterPoint area include renewable content. Check the renewable percentage on each plan's EFL.</p></details>
-    </section>
-
-    <!-- Resources -->
-    <section class="section">
-      <div class="card">
-        <h3>Houston resources</h3>
-        <ul>
-          <li><a href="/energydirect-site-staging/houston/compare-ambit-plans-by-zip/">Compare plans by ZIP (Houston)</a></li>
-          <li><a href="/energydirect-site-staging/texas/electricity-facts-label/">Understanding the EFL</a></li>
-          <li><a href="/energydirect-site-staging/texas/electricity-glossary/">Texas Electricity Glossary</a></li>
-        </ul>
-        <p class="muted"><strong>Nearby CenterPoint communities:</strong> Pasadena • Pearland • Sugar Land • Baytown • The Woodlands • League City</p>
-      </div>
-    </section>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    © 2026 Energy Direct — Independent Ambit Energy Consultant · PUCT&nbsp;#10117 · <a href="tel:+13615829724">(361) 582-9724</a>
-    <div style="margin-top:.8rem;">
-      <a href="/energydirect-site-staging/">Home</a> | <a href="/energydirect-site-staging/houston/">Houston</a> | <a href="/energydirect-site-staging/dallas/">Dallas</a> |
-      <a href="/energydirect-site-staging/corpus/">Corpus Christi</a> | <a href="/energydirect-site-staging/victoria/">Victoria</a> | <a href="/energydirect-site-staging/lubbock/">Lubbock</a> |
-      <a href="/energydirect-site-staging/texas/">Texas Hub</a> | <a href="/energydirect-site-staging/abilene/">Abilene</a> | <a href="/energydirect-site-staging/midland/">Midland</a> |
-      <a href="/energydirect-site-staging/odessa/">Odessa</a> | <a href="/energydirect-site-staging/san-angelo/">San Angelo</a> | <a href="/energydirect-site-staging/solar/">Solar Plans</a>
+      <details open>
+        <summary>How do I compare electricity rates in Houston?</summary>
+        <p>Houston is in a deregulated part of Texas, so you choose your retail electricity plan while CenterPoint Energy delivers the power over the same wires. Enter your ZIP code to see the plans available at your address, then compare the price per kWh at 500, 1,000, and 2,000 kWh, plus the contract term and any fees, before you enroll.</p>
+      </details>
+      <details>
+        <summary>Will my power get interrupted if I switch?</summary>
+        <p>No. Switching only changes who bills you for energy. CenterPoint Energy still delivers the electricity and handles outages, so there is no interruption and no new wiring.</p>
+      </details>
+      <details>
+        <summary>Are there no-deposit electricity plans in Houston?</summary>
+        <p>Yes. No-deposit plans are available for many Houston customers, subject to a quick eligibility check. Enter your ZIP to see which no-deposit options you qualify for.</p>
+      </details>
+      <details>
+        <summary>What is Energy Direct?</summary>
+        <p>Energy Direct is a local, independent, authorized Ambit Energy consultant serving Houston and the CenterPoint Energy service area. You enroll in real Ambit Energy plans and get a local person to help you pick the right one and answer questions after you sign up.</p>
+      </details>
     </div>
+  </section>
+
+  <a class="stickycall" href="tel:+13615829724">📞 Call or text (361) 582-9724</a>
+
+  <footer>
+    <div class="fcols">
+      <div>
+        <strong style="color:#fff">Energy Direct</strong>
+        <a href="/energydirect-site-staging/">Home</a>
+        <a href="https://energydirect.myambit.com/rates-and-plans/">Compare plans</a>
+        <a href="tel:+13615829724">Call/text (361) 582-9724</a>
+      </div>
+      <div>
+        <strong style="color:#fff">Texas cities</strong>
+        <a href="/energydirect-site-staging/houston/">Houston</a>
+        <a href="/energydirect-site-staging/dallas/">Dallas</a>
+        <a href="/energydirect-site-staging/san-angelo/">San Angelo</a>
+        <a href="/energydirect-site-staging/victoria/">Victoria</a>
+      </div>
+      <div>
+        <strong style="color:#fff">More cities</strong>
+        <a href="/energydirect-site-staging/abilene/">Abilene</a>
+        <a href="/energydirect-site-staging/midland/">Midland</a>
+        <a href="/energydirect-site-staging/odessa/">Odessa</a>
+        <a href="/energydirect-site-staging/lubbock/">Lubbock</a>
+      </div>
+      <div>
+        <strong style="color:#fff">Resources</strong>
+        <a href="/energydirect-site-staging/solar/">Solar buyback</a>
+        <a href="/energydirect-site-staging/texas/electricity-facts-label/">Electricity Facts Label</a>
+        <a href="/energydirect-site-staging/texas/electricity-glossary/">Glossary</a>
+      </div>
+    </div>
+    <p class="fine">Energy Direct is an independent, authorized Ambit Energy consultant serving Houston and the CenterPoint Energy service area in Texas. Plans, rates, and the Electricity Facts Label (EFL) are provided by Ambit Energy. © Energy Direct.</p>
   </footer>
 
-  <!-- ===== Business-identity schema (item 4): Organization + WebSite + LocalBusiness ===== -->
+  <!-- structured data: LocalBusiness + Service + FAQ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@graph":[
       {
-        "@type":"Organization",
-        "@id":"https://energydirect.org/#org",
+        "@type":["LocalBusiness","Organization"],
+        "@id":"https://energydirect.org/#business",
         "name":"Energy Direct",
-        "description":"Local independent Ambit Energy consultant helping Texas homes and businesses compare and enroll in electricity plans.",
-        "url":"https://energydirect.org/",
-        "logo":"https://energydirect.org/images/ambit%20logo.png",
-        "telephone":"+1-361-582-9724",
-        "areaServed":["Houston, TX","Dallas, TX","Corpus Christi, TX","Victoria, TX","Texas"],
-        "sameAs":["https://www.facebook.com/energydirect.org"]
-      },
-      {
-        "@type":"WebSite",
-        "@id":"https://energydirect.org/#website",
-        "name":"Energy Direct",
-        "url":"https://energydirect.org/",
-        "publisher":{"@id":"https://energydirect.org/#org"}
-      },
-      {
-        "@type":"LocalBusiness",
-        "@id":"https://energydirect.org/houston/#local",
-        "name":"Energy Direct — Houston",
+        "description":"Local, independent authorized Ambit Energy consultant serving Houston and the CenterPoint Energy service area in Texas.",
         "url":"https://energydirect.org/houston/",
-        "image":"https://energydirect.org/images/ambit%20logo.png",
         "telephone":"+1-361-582-9724",
-        "parentOrganization":{"@id":"https://energydirect.org/#org"},
-        "address":{"@type":"PostalAddress","addressLocality":"Houston","addressRegion":"TX","addressCountry":"US"},
-        "areaServed":"Houston, Texas"
+        "areaServed":{"@type":"City","name":"Houston","containedInPlace":{"@type":"State","name":"Texas"}},
+        "brand":{"@type":"Brand","name":"Ambit Energy"},
+        "knowsAbout":["Texas electricity plans","CenterPoint Energy","no-deposit electricity","solar buyback","fixed-rate electricity"]
+      },
+      {
+        "@type":"Service",
+        "name":"Houston electricity plan comparison and enrollment",
+        "serviceType":"Residential electricity plan enrollment",
+        "provider":{"@id":"https://energydirect.org/#business"},
+        "areaServed":{"@type":"City","name":"Houston"}
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"How do I compare electricity rates in Houston?","acceptedAnswer":{"@type":"Answer","text":"Houston is in a deregulated part of Texas, so you choose your retail electricity plan while CenterPoint Energy delivers the power. Enter your ZIP code to see available plans, then compare the price per kWh at 500, 1,000, and 2,000 kWh, plus term and fees, before enrolling."}},
+          {"@type":"Question","name":"Will my power get interrupted if I switch?","acceptedAnswer":{"@type":"Answer","text":"No. Switching only changes who bills you for energy. CenterPoint Energy still delivers the electricity and handles outages, so there is no interruption and no new wiring."}},
+          {"@type":"Question","name":"Are there no-deposit electricity plans in Houston?","acceptedAnswer":{"@type":"Answer","text":"Yes. No-deposit plans are available for many Houston customers, subject to a quick eligibility check. Enter your ZIP to see which no-deposit options you qualify for."}},
+          {"@type":"Question","name":"What is Energy Direct?","acceptedAnswer":{"@type":"Answer","text":"Energy Direct is a local, independent, authorized Ambit Energy consultant serving Houston and the CenterPoint Energy service area. You enroll in real Ambit Energy plans with local help choosing the right one."}}
+        ]
       }
     ]
   }
   </script>
-
-  <!-- FAQ schema: Houston -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"Will my lights go out if I switch providers in Houston?","acceptedAnswer":{"@type":"Answer","text":"Switching plans typically does not interrupt service. CenterPoint continues electric delivery while your new plan begins billing."}},
-      {"@type":"Question","name":"Who is the TDU in Houston?","acceptedAnswer":{"@type":"Answer","text":"CenterPoint Energy is the Transmission and Distribution Utility for most of the Houston area, managing lines, outages, and delivery."}},
-      {"@type":"Question","name":"How do I compare electricity rates by ZIP code in Houston?","acceptedAnswer":{"@type":"Answer","text":"Enter your service address or ZIP code on the plans page to see options for your location. Rates and availability vary by ZIP and usage."}},
-      {"@type":"Question","name":"Can I choose a renewable electricity plan in Houston?","acceptedAnswer":{"@type":"Answer","text":"Many plans in the CenterPoint Energy service area include renewable content. Check the renewable percentage on each plan's EFL."}}
-    ]
-  }
-  </script>
-
 </body>
 </html>
