@@ -9,8 +9,9 @@
   <link rel="icon" type="image/png" href="/energydirect-site-staging/favicon.png" />
   <link rel="stylesheet" href="/energydirect-site-staging/style.css" />
   <style>
-    body { background:#f7f8fa; color:#1e293b; }
+    body { background:#f7f8fa; color:#1e293b; font-size:1.08rem; line-height:1.72; }
     .wrap { max-width:1100px; margin:0 auto; padding:0 1rem; }
+    p { font-size:1.06rem; }
 
     /* Utility top bar with phone */
     .util-bar {
@@ -30,9 +31,9 @@
         url('/energydirect-site-staging/images/houston-electricity-centerpoint-skyline.webp') center/cover no-repeat;
       text-shadow:0 2px 8px rgba(0,0,0,.35);
     }
-    .hero .eyebrow { letter-spacing:.12em; text-transform:uppercase; font-size:.85rem; font-weight:700; opacity:.95; }
-    .hero h1 { font-size:2.6rem; line-height:1.15; margin:.4rem auto .6rem; max-width:840px; }
-    .hero p.lede { max-width:720px; margin:0 auto 1.4rem; font-size:1.18rem; }
+    .hero .eyebrow { letter-spacing:.12em; text-transform:uppercase; font-size:.9rem; font-weight:700; opacity:.95; }
+    .hero h1 { font-size:3rem; line-height:1.12; margin:.4rem auto .6rem; max-width:880px; }
+    .hero p.lede { max-width:740px; margin:0 auto 1.4rem; font-size:1.28rem; line-height:1.55; }
     .hero-cta { display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; }
     .btn {
       display:inline-block; padding:.95rem 1.8rem; border-radius:999px; font-weight:700;
@@ -51,11 +52,27 @@
 
     /* Sections */
     .section { padding:2.2rem 0 .5rem; }
-    .section h2 { font-size:1.6rem; margin:0 0 1rem; }
+    .section h2 { font-size:1.95rem; line-height:1.2; margin:0 0 1rem; }
+
+    /* Benefit band with real imagery */
+    .benefits { padding:2.4rem 0 1rem; }
+    .benefits h2 { text-align:center; }
+    .benefit-grid { display:grid; gap:18px; grid-template-columns:1fr; margin-top:1.2rem; }
+    @media(min-width:760px){ .benefit-grid{ grid-template-columns:repeat(3,1fr); } }
+    .benefit { background:#fff; border:1px solid #e5e7eb; border-radius:16px; padding:1.2rem 1.2rem 1.4rem; text-align:center; box-shadow:0 4px 14px rgba(15,23,42,.06); }
+    .benefit img { width:118px; height:118px; object-fit:contain; margin:.2rem auto .6rem; display:block; }
+    .benefit h3 { margin:.2rem 0 .4rem; font-size:1.22rem; }
+    .benefit p { font-size:1rem; color:#475569; margin:0; }
+
+    /* Framed inline skyline */
+    .skyline-band { margin:2.2rem 0 .5rem; border-radius:18px; overflow:hidden; box-shadow:0 8px 24px rgba(15,23,42,.12); position:relative; }
+    .skyline-band img { width:100%; height:auto; display:block; }
+    .skyline-band .cap { position:absolute; left:0; right:0; bottom:0; padding:1rem 1.2rem; color:#fff; font-weight:700; font-size:1.15rem; background:linear-gradient(0deg, rgba(15,23,42,.75), rgba(15,23,42,0)); }
     .grid-2 { display:grid; gap:20px; grid-template-columns:1fr; }
     @media(min-width:880px){ .grid-2{ grid-template-columns:1fr 1fr; } }
     .card { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:22px; box-shadow:0 2px 10px rgba(15,23,42,.05); text-align:left; }
-    .card h3 { margin:.1rem 0 .6rem; font-size:1.18rem; }
+    .card h3 { margin:.1rem 0 .6rem; font-size:1.28rem; }
+    .card li { line-height:1.7; }
     .muted { color:#475569; }
     .pill-steps { margin:1rem 0 0; padding:1rem 1.1rem; border-radius:12px; background:#eff6ff; }
     .pill-steps ol { margin:.4rem 0 0; padding-left:1.2rem; }
@@ -109,6 +126,34 @@
 
   <div class="wrap">
     <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/energydirect-site-staging/">Home</a> › <span>Houston</span></nav>
+
+    <!-- Benefit band: why Houston homeowners switch with Energy Direct -->
+    <section class="benefits">
+      <h2>Why Houston homeowners switch with Energy Direct</h2>
+      <div class="benefit-grid">
+        <div class="benefit">
+          <img src="/energydirect-site-staging/images/budget.webp" alt="Predictable monthly electricity bill" loading="lazy" />
+          <h3>Predictable bills</h3>
+          <p>Lock a clear per-kWh rate from the Electricity Facts Label, no guessing what next month brings.</p>
+        </div>
+        <div class="benefit">
+          <img src="/energydirect-site-staging/images/secure.webp" alt="No hidden fees, plans read in plain English" loading="lazy" />
+          <h3>No surprises</h3>
+          <p>We read the fine print, minimum-usage fees, bill credits, term length, before you sign.</p>
+        </div>
+        <div class="benefit">
+          <img src="/energydirect-site-staging/images/free.webp" alt="Free local help choosing a plan" loading="lazy" />
+          <h3>Free local help</h3>
+          <p>A real Texas consultant you can call or text. No call center, no cost to compare.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Inline skyline band -->
+    <div class="skyline-band">
+      <img src="/energydirect-site-staging/images/houston-electricity-centerpoint-skyline.webp" alt="Houston skyline, CenterPoint Energy service area" loading="lazy" />
+      <div class="cap">Serving the Houston &amp; CenterPoint Energy service area</div>
+    </div>
 
     <!-- Intro / how it works -->
     <section class="section">
