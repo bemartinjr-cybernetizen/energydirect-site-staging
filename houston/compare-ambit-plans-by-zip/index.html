@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Compare Texas Electricity Plans in Houston by ZIP | Energy Direct</title>
-  <meta name="description" content="Compare electricity plans at your exact Houston address by ZIP. Energy Direct, a local independent Ambit Energy consultant in the CenterPoint area, shows your real plans and lets you enroll online. Call or text (361) 582-9724." />
+  <title>Compare Houston Electricity Plans by ZIP Code | Energy Direct (Ambit Energy)</title>
+  <meta name="description" content="Compare real Ambit plans for your Houston ZIP (CenterPoint area), see the rate that matches your usage and enroll online. Call or text (361) 582-9724." />
   <link rel="canonical" href="https://energydirect.org/houston/compare-ambit-plans-by-zip/" />
   <link rel="icon" type="image/png" href="../../favicon.png" />
   <style>
@@ -19,6 +19,7 @@
     p{ font-size:1.13rem; }
     a{ color:var(--brand); }
 
+    /* Slim identity bar — phone is a quiet secondary link, NOT a loud CTA */
     .util{ background:#0f172a; color:#cbd5e1; font-size:.95rem;
            display:flex; justify-content:space-between; flex-wrap:wrap; gap:.3rem 1rem;
            align-items:center; padding:.5rem 1.1rem; }
@@ -26,6 +27,7 @@
     .util a{ color:#e2e8f0; text-decoration:none; }
     .util a:hover{ text-decoration:underline; }
 
+    /* HERO — the WHY + the one conversion action */
     .hero{ position:relative; color:#fff; text-align:center; padding:4rem 1rem 3.4rem;
       background:linear-gradient(180deg, rgba(15,23,42,.62) 0%, rgba(15,23,42,.78) 100%),
                  url('../../images/houston-electricity-centerpoint-skyline.webp') center 38%/cover no-repeat; }
@@ -48,6 +50,7 @@
     .hero .micro{ display:block; margin:1rem auto 0; font-size:1rem; color:#dbeafe; }
     .hero .micro a{ color:#fff; font-weight:700; }
 
+    /* 3-step: "here is how you convert" */
     .steps{ background:#fff; border-bottom:1px solid var(--line); }
     .steps .wrap{ display:grid; gap:20px; grid-template-columns:1fr; padding:1.8rem 1.1rem; }
     @media(min-width:760px){ .steps .wrap{ grid-template-columns:repeat(3,1fr); } }
@@ -57,6 +60,7 @@
     .step h4{ margin:.15rem 0 .25rem; font-size:1.2rem; }
     .step p{ margin:0; font-size:1.05rem; color:var(--muted); }
 
+    /* Trust strip — real credentials only */
     .trust{ background:#0b1220; color:#e2e8f0; }
     .trust .wrap{ display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem 2.2rem; padding:1rem 1.1rem; }
     .trust span{ font-size:1rem; font-weight:600; }
@@ -67,6 +71,35 @@
     .section .sub{ color:var(--muted); max-width:720px; margin:0 0 1.4rem; }
     .center{ text-align:center; } .center .sub{ margin-left:auto; margin-right:auto; }
 
+    /* WHY-switch benefit cards with REAL photography */
+    .why{ display:grid; gap:22px; grid-template-columns:1fr; margin-top:1.2rem; }
+    @media(min-width:820px){ .why{ grid-template-columns:repeat(3,1fr); } }
+    .why .card{ background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden;
+      box-shadow:0 8px 24px rgba(15,23,42,.07); }
+    .why .card img{ width:100%; height:190px; object-fit:cover; display:block; }
+    .why .card .pad{ padding:1.1rem 1.25rem 1.4rem; }
+    .why .card h3{ margin:.1rem 0 .45rem; font-size:1.3rem; }
+    .why .card p{ font-size:1.05rem; color:var(--muted); margin:0; }
+
+    /* Value-comparison grid — where Ambit genuinely wins (verified terms only) */
+    .compare{ margin-top:1.3rem; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .ctable{ width:100%; border-collapse:separate; border-spacing:0; min-width:560px; background:#fff;
+      border:1px solid var(--line); border-radius:18px; overflow:hidden; box-shadow:0 10px 28px rgba(15,23,42,.08); }
+    .ctable th,.ctable td{ padding:1.05rem 1.15rem; text-align:left; border-bottom:1px solid var(--line);
+      font-size:1.04rem; vertical-align:top; }
+    .ctable thead th{ background:#f1f5f9; color:var(--ink); font-size:1.05rem; text-align:center; }
+    .ctable thead th.feat{ text-align:left; }
+    .ctable thead th.amb{ background:linear-gradient(135deg,#1e3a8a,#2563eb); color:#fff; font-weight:800; font-size:1.15rem; }
+    .ctable .feat{ font-weight:600; color:var(--ink); width:46%; }
+    .ctable td.amb{ background:#eff6ff; text-align:center; font-weight:700; }
+    .ctable td.alt{ text-align:center; color:var(--muted); }
+    .ctable tbody tr:last-child td{ border-bottom:0; }
+    .yes{ color:var(--go-d); font-weight:800; }
+    .meh{ color:#94a3b8; font-weight:700; }
+    .cnote{ font-size:.92rem; color:var(--muted); margin:.8rem 0 0; }
+    .cnote a{ color:var(--brand); }
+
+    /* Repeated conversion band */
     .cta-band{ background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 100%); color:#fff;
       border-radius:18px; padding:2.2rem 1.5rem; text-align:center; margin:2.6rem 0; }
     .cta-band h2{ color:#fff; margin:0 0 .5rem; font-size:1.85rem; }
@@ -94,6 +127,7 @@
     footer a{ color:#e2e8f0; text-decoration:none; }
     .fnav{ margin-top:.9rem; line-height:2; }
 
+    /* sticky mobile call — the quiet always-there secondary path */
     .stickycall{ position:fixed; left:0; right:0; bottom:0; z-index:40; display:none;
       background:#0f172a; color:#fff; text-align:center; padding:.85rem; font-weight:800;
       font-size:1.1rem; text-decoration:none; box-shadow:0 -4px 14px rgba(0,0,0,.25); }
@@ -107,10 +141,12 @@
     <a href="tel:+13615829724">Call or text (361) 582-9724</a>
   </div>
 
+  <!-- HERO: the WHY + ONE action -->
   <header class="hero">
-    <div class="eyebrow">Houston &amp; the CenterPoint Energy Area</div>
-    <h1>Compare Houston electricity plans by ZIP</h1>
-    <p class="lede">Rates and plan availability change block by block. Enter your ZIP to see the actual plans at your Houston address, then enroll online in minutes.</p>
+    <div class="eyebrow">Houston &amp; the CenterPoint Area</div>
+    <h1>Compare Houston electricity plans for your exact ZIP code</h1>
+    <p class="lede">Rates and plan availability change from one Houston ZIP to the next. Enter your ZIP to see the real
+      Ambit plans at your address, match the rate to how much power your home uses, and enroll online.</p>
     <form class="zipform" action="https://shopping.ambitenergy.com/Path2Plans" method="get" target="_blank" rel="noopener" onsubmit="this.promocode.value=(this.dwellingtype.value==='A'?'consultantpm':'consultantps');">
       <input type="hidden" name="customertype" value="Residential" />
       <input type="hidden" name="language" value="en" />
@@ -126,14 +162,16 @@
     <span class="micro">Takes a minute. No account, no obligation. Prefer a hand? <a href="tel:+13615829724">Call or text us</a>.</span>
   </header>
 
+  <!-- HOW YOU CONVERT, in 3 steps -->
   <section class="steps">
     <div class="wrap">
-      <div class="step"><div class="n">1</div><div><h4>Enter your ZIP</h4><p>See the exact plans available at your Houston address.</p></div></div>
-      <div class="step"><div class="n">2</div><div><h4>Compare the plan documents</h4><p>Open the Electricity Facts Label for each plan and check term, fees, and rate type.</p></div></div>
-      <div class="step"><div class="n">3</div><div><h4>Enroll online</h4><p>Pick the plan that fits and sign up in minutes. No call required.</p></div></div>
+      <div class="step"><div class="n">1</div><div><h4>Enter your Houston ZIP</h4><p>See the exact plans available at your Houston address.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h4>Compare the real rate for your usage</h4><p>See the price that matches how much power your home actually uses.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h4>Enroll online</h4><p>Pick your plan and sign up in minutes. No call required.</p></div></div>
     </div>
   </section>
 
+  <!-- Trust: real, verifiable credentials only -->
   <div class="trust"><div class="wrap">
     <span>⚡ <b>CenterPoint</b> service area</span>
     <span>✅ <b>Local Texas consultant</b>, not a call center</span>
@@ -142,62 +180,100 @@
   </div></div>
 
   <div class="wrap">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> › <a href="../">Houston</a> › <span>Compare Plans by ZIP</span></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> › <a href="../">Houston</a> › <span>Compare by ZIP</span></nav>
 
+    <!-- WHY AMBIT — product reasons, real photography, one idea per card -->
     <section class="section center">
-      <h2>Why comparing by ZIP beats a "Houston average"</h2>
-      <p class="sub">A single citywide average hides what you would actually pay. Two things drive your real price, and both move by address.</p>
-    </section>
-
-    <section class="section">
-      <div class="grid2">
-        <div class="panel">
-          <h3>Your delivery charges depend on your utility</h3>
-          <p class="muted">Most of Houston sits in the CenterPoint Energy delivery area, but the exact delivery charges that flow onto your bill are tied to your meter, not to a citywide number. A ZIP lookup pulls the plans priced for your address.</p>
-          <ul>
-            <li><strong>Same poles and wires:</strong> CenterPoint delivers the power no matter which plan you choose.</li>
-            <li><strong>Different plan menus:</strong> available terms and offers can vary by neighborhood, from The Heights and Katy to Pearland and Sugar Land.</li>
-          </ul>
+      <h2>Why Houston homeowners choose Ambit Energy</h2>
+      <p class="sub">What you actually get when you pick an Ambit plan in the CenterPoint area.</p>
+      <div class="why">
+        <div class="card">
+          <img src="../../images/benefit-save.webp" alt="Houston homeowner with a steady, predictable electricity bill" loading="lazy" />
+          <div class="pad">
+            <h3>Lock in a fixed rate</h3>
+            <p>Ambit's fixed-rate plans hold your price for the full term, so a hot Houston summer does not blow up your bill.</p>
+          </div>
         </div>
-        <div class="panel">
-          <h3>Your home's usage changes the best plan</h3>
-          <p class="muted">A small apartment and a four-bedroom house rarely land on the same plan. The price that looks low at 1,000 kWh can change once minimum-usage fees and bill credits are factored in at your real usage.</p>
-          <ul>
-            <li><strong>Match the plan to your usage</strong>, not to a headline rate.</li>
-            <li><strong>Check the kWh tiers</strong> the plan prices at, so the number you see is the number you live with.</li>
-          </ul>
+        <div class="card">
+          <img src="../../images/benefit-clarity.webp" alt="Ambit Energy Free Energy and reward plan benefits" loading="lazy" />
+          <div class="pad">
+            <h3>Earn Free Energy &amp; rewards</h3>
+            <p>Refer 15 active customers and Ambit credits your own energy free. Travel and reward plans are available too.</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <h2>What to read on every Electricity Facts Label</h2>
-      <p class="sub">The EFL is the one document that tells you the truth about a plan. Open it for each plan before you enroll.</p>
-      <div class="grid2">
-        <div class="panel">
-          <h3>The numbers that move your bill</h3>
-          <ul>
-            <li><strong>Price at 500 / 1,000 / 2,000 kWh</strong>: matched to your home size.</li>
-            <li><strong>Minimum-usage fees</strong>: charges that hit if you use too little.</li>
-            <li><strong>Bill credits</strong>: the usage level where any credit kicks in.</li>
-            <li><strong>TDU delivery charges</strong>: the CenterPoint line items, listed separately.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>The terms that move your options later</h3>
-          <ul>
-            <li><strong>Rate type</strong>: fixed plans hold the energy charge for the term, variable plans can change month to month.</li>
-            <li><strong>Contract length</strong>: and what happens at the end of the term.</li>
-            <li><strong>Early-termination fee</strong>: what leaving early would cost.</li>
-            <li><strong>Renewable content</strong>: the green percentage, if that matters to you.</li>
-          </ul>
+        <div class="card">
+          <img src="../../images/benefit-local.webp" alt="Ambit Energy Texas-based customer care after you switch" loading="lazy" />
+          <div class="pad">
+            <h3>Support after you switch</h3>
+            <p>Once you enroll, Ambit's Texas-based Customer Care handles billing and service Monday through Saturday. Green-e certified renewable plans are available.</p>
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- VALUE COMPARISON — "you can choose anyone; here is why Ambit" -->
+    <section class="section">
+      <h2>You can choose anyone in Texas. Here is why people choose Ambit.</h2>
+      <p class="sub">Texas lets you pick your retail provider. On price, plans run close. Where Ambit pulls ahead is what you get back.</p>
+      <div class="compare">
+        <table class="ctable">
+          <thead>
+            <tr>
+              <th class="feat">What you get</th>
+              <th class="amb">Ambit (Energy&nbsp;Direct)</th>
+              <th>Typical Texas provider</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feat">A real path to a $0 energy bill — refer 15 active customers and Ambit credits the average of what they pay, up to your entire energy charge, every month with no time limit to get there</td>
+              <td class="amb"><span class="yes">✓ Free Energy</span></td>
+              <td class="alt"><span class="meh">Not offered</span></td>
+            </tr>
+            <tr>
+              <td class="feat">$50 a month in Reward Dollars that never expire, redeemable 500,000+ ways (dining, retail, travel) on the Ultimate Perks plan</td>
+              <td class="amb"><span class="yes">✓</span></td>
+              <td class="alt"><span class="meh">Rare</span></td>
+            </tr>
+            <tr>
+              <td class="feat">Travel reward points — 1 point for every kWh you already use, redeemable toward travel</td>
+              <td class="amb"><span class="yes">✓</span></td>
+              <td class="alt"><span class="meh">Rare</span></td>
+            </tr>
+            <tr>
+              <td class="feat">A 60-day "Try it, Like it, or Change it" window — switch to another Ambit term plan in your first 60 days with no early-termination fee</td>
+              <td class="amb"><span class="yes">✓</span></td>
+              <td class="alt"><span class="meh">Varies</span></td>
+            </tr>
+            <tr>
+              <td class="feat">100% green / renewable plan option</td>
+              <td class="amb"><span class="yes">✓</span></td>
+              <td class="alt">Common</td>
+            </tr>
+            <tr>
+              <td class="feat">No-deposit options and a switch with no interruption to your power</td>
+              <td class="amb"><span class="yes">✓</span></td>
+              <td class="alt">Common</td>
+            </tr>
+            <tr>
+              <td class="feat">Your actual rate for your address</td>
+              <td class="amb"><strong>See it by ZIP&nbsp;↓</strong></td>
+              <td class="alt">Varies</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="cnote">Ambit program terms verified on Ambit Energy's official site, June 2026:
+          <a href="https://www.ambitenergy.com/rates-and-plans/ambit-advantages/free-energy" target="_blank" rel="noopener">Free&nbsp;Energy</a>,
+          <a href="https://www.ambitenergy.com/spark/ambit-ultimate-perks" target="_blank" rel="noopener">Ultimate&nbsp;Perks</a>,
+          and the Lone Star Plus / "Try it, Like it, Change it" guarantee. "Typical Texas provider" reflects common fixed-rate retail plans;
+          always compare a specific plan's Electricity Facts Label before you enroll.</p>
+      </div>
+    </section>
+
+    <!-- Repeated conversion band -->
     <div class="cta-band">
-      <h2>Ready to see your Houston plans?</h2>
-      <p>Enter your ZIP to compare the real plans at your address and enroll online.</p>
+      <h2>Ready to see your plans?</h2>
+      <p>Enter your ZIP to compare real Houston rates and enroll online.</p>
       <form class="zipform" action="https://shopping.ambitenergy.com/Path2Plans" method="get" target="_blank" rel="noopener" onsubmit="this.promocode.value=(this.dwellingtype.value==='A'?'consultantpm':'consultantps');">
         <input type="hidden" name="customertype" value="Residential" />
         <input type="hidden" name="language" value="en" />
@@ -212,30 +288,42 @@
       </form>
     </div>
 
+    <!-- WHY COMPARE BY ZIP — the page's core idea, scannable -->
     <section class="section">
-      <h2>Why Houston homeowners pick an Ambit plan</h2>
-      <p class="sub">You can choose any retail provider in Texas. On price, fixed plans run close. Where Ambit pulls ahead is what you get back on the power you already use.</p>
+      <h2>Why compare by ZIP in Houston</h2>
       <div class="grid2">
         <div class="panel">
-          <h3>A real path to Free Energy</h3>
-          <p class="muted">Refer 15 active customers and Ambit credits your own energy free, with no time limit to get there. It is the kind of return a standard fixed plan does not offer.</p>
+          <h3>Houston is not one single rate</h3>
+          <p class="muted">The plans and prices offered to a home change from one Houston ZIP to the next, and they also depend on how
+            much power that home actually uses. An apartment in The Heights and a house in Katy or Sugar Land draw very different amounts
+            of electricity, so the plan that wins for one can be the wrong pick for the other.</p>
+          <p class="muted">That is why a single "Houston average" rate misleads you. The honest number is the one tied to your address and
+            your usage, which is exactly what you see when you enter your ZIP and choose house or apartment.</p>
         </div>
         <div class="panel">
-          <h3>Rewards on power you already use</h3>
-          <p class="muted">The Ultimate Perks plan adds $50 a month in Reward Dollars, and travel plans earn 1 point for every kWh. A 60-day "Try it, Like it, Change it" window lets you switch Ambit term plans with no early-termination fee in your first 60 days. Green plan and no-deposit options are available.</p>
+          <h3>What to check on each plan</h3>
+          <ul>
+            <li><strong>Price at 500 / 1,000 / 2,000 kWh</strong>: read the level that matches your home size, not just the headline figure.</li>
+            <li><strong>Minimum-usage fees</strong>: extra charges that hit when you use too little in a month.</li>
+            <li><strong>Bill credits</strong>: the usage level where a credit kicks in, and whether your home reaches it.</li>
+            <li><strong>Term &amp; early-termination fee</strong>: how long you are locked in and what leaving early costs.</li>
+            <li><strong>Renewable content</strong>: the green percentage, if that matters to you.</li>
+          </ul>
+          <p class="muted">Compare these on the Electricity Facts Label for each plan before you enroll, so you are comparing the same things side by side.</p>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section">
-      <h2>Houston plan-comparison questions</h2>
-      <details class="accordion"><summary>Is Ambit available in my Houston ZIP?</summary>
-        <p>Availability depends on your address inside the deregulated CenterPoint area. Enter your ZIP to see the plans offered at your location.</p></details>
-      <details class="accordion"><summary>Will my power be interrupted when I switch?</summary>
-        <p>No. CenterPoint keeps delivering electricity without interruption while your new plan simply begins billing.</p></details>
-      <details class="accordion"><summary>Where do I find the Electricity Facts Label?</summary>
-        <p>Each plan links its EFL on the offer page. Open it to compare the rate, fees, term, and disclosures before you enroll.</p></details>
-      <details class="accordion"><summary>Is there any cost to compare or to get help?</summary>
+      <h2>Houston electricity questions</h2>
+      <details class="accordion"><summary>Why do electricity rates differ by ZIP code in Houston?</summary>
+        <p>Retail providers set the plans and prices they offer at the ZIP level, and availability can change from one Houston neighborhood to the next. Entering your ZIP shows the real plans at your address instead of a citywide average.</p></details>
+      <details class="accordion"><summary>Does an apartment pay a different rate than a house?</summary>
+        <p>Often, yes. The plan that costs the least depends on how much electricity your home uses, and an apartment usually uses far less than a house. That is why you choose house or apartment when you compare, so the rate you see matches your real usage level.</p></details>
+      <details class="accordion"><summary>Will switching interrupt my power?</summary>
+        <p>No. CenterPoint keeps delivering power without interruption while your new plan simply begins billing. There is nothing to install and no day without electricity.</p></details>
+      <details class="accordion"><summary>Is there any cost to compare plans?</summary>
         <p>No. Comparing plans and getting help from Energy Direct is free. You enroll directly in the plan you choose.</p></details>
     </section>
   </div>
@@ -254,6 +342,7 @@
     </div>
   </footer>
 
+  <!-- Business-identity schema (item 4) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -275,9 +364,9 @@
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"Is Ambit available in my Houston ZIP?","acceptedAnswer":{"@type":"Answer","text":"Availability depends on your address inside the deregulated CenterPoint area. Enter your ZIP to see the plans offered at your location."}},
-    {"@type":"Question","name":"Will my power be interrupted when I switch providers in Houston?","acceptedAnswer":{"@type":"Answer","text":"No. CenterPoint continues electric delivery without interruption while your new plan begins billing."}},
-    {"@type":"Question","name":"Where do I find the Electricity Facts Label for a Houston plan?","acceptedAnswer":{"@type":"Answer","text":"Each plan links its EFL on the offer page. Open it to compare the rate, fees, term, and disclosures before you enroll."}},
+    {"@type":"Question","name":"Why do electricity rates differ by ZIP code in Houston?","acceptedAnswer":{"@type":"Answer","text":"Retail providers set the plans and prices they offer at the ZIP level, and availability can change from one Houston neighborhood to the next. Entering your ZIP shows the real plans at your address instead of a citywide average."}},
+    {"@type":"Question","name":"Does an apartment pay a different rate than a house in Houston?","acceptedAnswer":{"@type":"Answer","text":"Often yes. The least-cost plan depends on how much electricity your home uses, and an apartment usually uses far less than a house, so you choose house or apartment when comparing to match the rate to your usage."}},
+    {"@type":"Question","name":"Will switching providers interrupt my power in Houston?","acceptedAnswer":{"@type":"Answer","text":"No. CenterPoint continues delivering power without interruption while your new plan begins billing. There is nothing to install and no day without electricity."}},
     {"@type":"Question","name":"Is there any cost to compare Houston electricity plans with Energy Direct?","acceptedAnswer":{"@type":"Answer","text":"No. Comparing plans and getting help from Energy Direct is free; you enroll directly in the plan you choose."}}
   ]}
   </script>

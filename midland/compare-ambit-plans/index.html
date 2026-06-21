@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Compare Midland, TX Electricity Plans by ZIP | Energy Direct</title>
-  <meta name="description" content="Compare electricity plans at your Midland, TX address by ZIP. Energy Direct, a local independent Ambit Energy consultant in the Oncor area, shows your real plans and lets you enroll online. Call or text (361) 582-9724." />
+  <title>Compare Midland Electricity Plans | Energy Direct (Ambit Energy)</title>
+  <meta name="description" content="Compare real Ambit plans for your Midland ZIP (Oncor area), see the rate that matches your usage and enroll online. Call or text (361) 582-9724." />
   <link rel="canonical" href="https://energydirect.org/midland/compare-ambit-plans/" />
   <link rel="icon" type="image/png" href="../../favicon.png" />
   <style>
@@ -19,6 +19,7 @@
     p{ font-size:1.13rem; }
     a{ color:var(--brand); }
 
+    /* Slim identity bar — phone is a quiet secondary link, NOT a loud CTA */
     .util{ background:#0f172a; color:#cbd5e1; font-size:.95rem;
            display:flex; justify-content:space-between; flex-wrap:wrap; gap:.3rem 1rem;
            align-items:center; padding:.5rem 1.1rem; }
@@ -26,6 +27,7 @@
     .util a{ color:#e2e8f0; text-decoration:none; }
     .util a:hover{ text-decoration:underline; }
 
+    /* HERO — the WHY + the one conversion action */
     .hero{ position:relative; color:#fff; text-align:center; padding:4rem 1rem 3.4rem;
       background:linear-gradient(180deg, rgba(15,23,42,.62) 0%, rgba(15,23,42,.78) 100%),
                  url('../../images/midland-skyline.webp') center 38%/cover no-repeat; }
@@ -48,6 +50,7 @@
     .hero .micro{ display:block; margin:1rem auto 0; font-size:1rem; color:#dbeafe; }
     .hero .micro a{ color:#fff; font-weight:700; }
 
+    /* 3-step: "here is how you convert" */
     .steps{ background:#fff; border-bottom:1px solid var(--line); }
     .steps .wrap{ display:grid; gap:20px; grid-template-columns:1fr; padding:1.8rem 1.1rem; }
     @media(min-width:760px){ .steps .wrap{ grid-template-columns:repeat(3,1fr); } }
@@ -57,6 +60,7 @@
     .step h4{ margin:.15rem 0 .25rem; font-size:1.2rem; }
     .step p{ margin:0; font-size:1.05rem; color:var(--muted); }
 
+    /* Trust strip — real credentials only */
     .trust{ background:#0b1220; color:#e2e8f0; }
     .trust .wrap{ display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem 2.2rem; padding:1rem 1.1rem; }
     .trust span{ font-size:1rem; font-weight:600; }
@@ -67,6 +71,35 @@
     .section .sub{ color:var(--muted); max-width:720px; margin:0 0 1.4rem; }
     .center{ text-align:center; } .center .sub{ margin-left:auto; margin-right:auto; }
 
+    /* WHY-switch benefit cards with REAL photography */
+    .why{ display:grid; gap:22px; grid-template-columns:1fr; margin-top:1.2rem; }
+    @media(min-width:820px){ .why{ grid-template-columns:repeat(3,1fr); } }
+    .why .card{ background:#fff; border:1px solid var(--line); border-radius:18px; overflow:hidden;
+      box-shadow:0 8px 24px rgba(15,23,42,.07); }
+    .why .card img{ width:100%; height:190px; object-fit:cover; display:block; }
+    .why .card .pad{ padding:1.1rem 1.25rem 1.4rem; }
+    .why .card h3{ margin:.1rem 0 .45rem; font-size:1.3rem; }
+    .why .card p{ font-size:1.05rem; color:var(--muted); margin:0; }
+
+    /* Value-comparison grid — where Ambit genuinely wins (verified terms only) */
+    .compare{ margin-top:1.3rem; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .ctable{ width:100%; border-collapse:separate; border-spacing:0; min-width:560px; background:#fff;
+      border:1px solid var(--line); border-radius:18px; overflow:hidden; box-shadow:0 10px 28px rgba(15,23,42,.08); }
+    .ctable th,.ctable td{ padding:1.05rem 1.15rem; text-align:left; border-bottom:1px solid var(--line);
+      font-size:1.04rem; vertical-align:top; }
+    .ctable thead th{ background:#f1f5f9; color:var(--ink); font-size:1.05rem; text-align:center; }
+    .ctable thead th.feat{ text-align:left; }
+    .ctable thead th.amb{ background:linear-gradient(135deg,#1e3a8a,#2563eb); color:#fff; font-weight:800; font-size:1.15rem; }
+    .ctable .feat{ font-weight:600; color:var(--ink); width:46%; }
+    .ctable td.amb{ background:#eff6ff; text-align:center; font-weight:700; }
+    .ctable td.alt{ text-align:center; color:var(--muted); }
+    .ctable tbody tr:last-child td{ border-bottom:0; }
+    .yes{ color:var(--go-d); font-weight:800; }
+    .meh{ color:#94a3b8; font-weight:700; }
+    .cnote{ font-size:.92rem; color:var(--muted); margin:.8rem 0 0; }
+    .cnote a{ color:var(--brand); }
+
+    /* Repeated conversion band */
     .cta-band{ background:linear-gradient(135deg,#1e3a8a 0%,#2563eb 100%); color:#fff;
       border-radius:18px; padding:2.2rem 1.5rem; text-align:center; margin:2.6rem 0; }
     .cta-band h2{ color:#fff; margin:0 0 .5rem; font-size:1.85rem; }
@@ -94,6 +127,7 @@
     footer a{ color:#e2e8f0; text-decoration:none; }
     .fnav{ margin-top:.9rem; line-height:2; }
 
+    /* sticky mobile call — the quiet always-there secondary path */
     .stickycall{ position:fixed; left:0; right:0; bottom:0; z-index:40; display:none;
       background:#0f172a; color:#fff; text-align:center; padding:.85rem; font-weight:800;
       font-size:1.1rem; text-decoration:none; box-shadow:0 -4px 14px rgba(0,0,0,.25); }
@@ -107,10 +141,12 @@
     <a href="tel:+13615829724">Call or text (361) 582-9724</a>
   </div>
 
+  <!-- HERO: the WHY + ONE action -->
   <header class="hero">
-    <div class="eyebrow">Midland &amp; the Oncor Service Area</div>
-    <h1>Compare Midland electricity plans by ZIP</h1>
-    <p class="lede">West Texas rates and plan menus change by address. Enter your ZIP to see the real plans available in Midland, then enroll online in minutes.</p>
+    <div class="eyebrow">Midland &amp; the Oncor Area</div>
+    <h1>Compare Midland electricity plans for your exact address</h1>
+    <p class="lede">You can pick any electricity provider in Texas. Ambit is the one with a real path to
+      <strong>free energy</strong> and rewards on the power you already use. Enter your ZIP to see your plans and enroll online.</p>
     <form class="zipform" action="https://shopping.ambitenergy.com/Path2Plans" method="get" target="_blank" rel="noopener" onsubmit="this.promocode.value=(this.dwellingtype.value==='A'?'consultantpm':'consultantps');">
       <input type="hidden" name="customertype" value="Residential" />
       <input type="hidden" name="language" value="en" />
@@ -126,14 +162,16 @@
     <span class="micro">Takes a minute. No account, no obligation. Prefer a hand? <a href="tel:+13615829724">Call or text us</a>.</span>
   </header>
 
+  <!-- HOW YOU CONVERT, in 3 steps -->
   <section class="steps">
     <div class="wrap">
-      <div class="step"><div class="n">1</div><div><h4>Enter your ZIP</h4><p>See the exact plans available at your Midland address.</p></div></div>
-      <div class="step"><div class="n">2</div><div><h4>Compare the plan documents</h4><p>Open the Electricity Facts Label for each plan and check term, fees, and rate type.</p></div></div>
-      <div class="step"><div class="n">3</div><div><h4>Enroll online</h4><p>Pick the plan that fits and sign up in minutes. No call required.</p></div></div>
+      <div class="step"><div class="n">1</div><div><h4>Enter your Midland ZIP</h4><p>See the exact plans available at your Midland address.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h4>Compare the real rate for your usage</h4><p>See the price that matches how much power your home actually uses.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h4>Enroll online</h4><p>Pick your plan and sign up in minutes. No call required.</p></div></div>
     </div>
   </section>
 
+  <!-- Trust: real, verifiable credentials only -->
   <div class="trust"><div class="wrap">
     <span>⚡ <b>Oncor</b> service area</span>
     <span>✅ <b>Local Texas consultant</b>, not a call center</span>
@@ -142,63 +180,100 @@
   </div></div>
 
   <div class="wrap">
-    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> › <a href="../">Midland</a> › <span>Compare Plans</span></nav>
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> › <a href="../">Midland</a> › <span>Compare plans</span></nav>
 
+    <!-- WHY AMBIT — product reasons, real photography, one idea per card -->
     <section class="section center">
-      <h2>Availability in Midland and the Oncor area</h2>
-      <p class="sub">Midland sits in a deregulated part of the Oncor delivery area, which means you choose your retail provider. Comparing by ZIP is how you find the plan priced for your address.</p>
+      <h2>Why Midland homeowners choose Ambit Energy</h2>
+      <p class="sub">What you actually get when you pick an Ambit plan in the Oncor area.</p>
+      <div class="why">
+        <div class="card">
+          <img src="../../images/benefit-save.webp" alt="Midland homeowner with a steady, predictable electricity bill" loading="lazy" />
+          <div class="pad">
+            <h3>Lock in a fixed rate</h3>
+            <p>Ambit's fixed-rate plans hold your price for the full term, so a hot Houston summer does not blow up your bill.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../images/benefit-clarity.webp" alt="Ambit Energy Free Energy and reward plan benefits" loading="lazy" />
+          <div class="pad">
+            <h3>Earn Free Energy &amp; rewards</h3>
+            <p>Refer 15 active customers and Ambit credits your own energy free. Travel and reward plans are available too.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="../../images/benefit-local.webp" alt="Ambit Energy Texas-based customer care after you switch" loading="lazy" />
+          <div class="pad">
+            <h3>Support after you switch</h3>
+            <p>Once you enroll, Ambit's Texas-based Customer Care handles billing and service Monday through Saturday. Green-e certified renewable plans are available.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
+    <!-- VALUE COMPARISON — "you can choose anyone; here is why Ambit" -->
     <section class="section">
-      <div class="grid2">
-        <div class="panel">
-          <h3>Oncor delivers the power either way</h3>
-          <p class="muted">Oncor is the Transmission and Distribution Utility for Midland and nearby Odessa. Oncor owns the poles, wires, and meters and restores outages no matter which plan you pick. Your retail plan only sets your price, term, and billing.</p>
-          <ul>
-            <li><strong>Same delivery, regulated charges:</strong> Oncor delivery charges apply to every provider equally.</li>
-            <li><strong>Your menu varies:</strong> available terms and offers can differ across Midland ZIP codes.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>Your home's usage changes the best plan</h3>
-          <p class="muted">A small apartment and a large West Texas house rarely land on the same plan. The price that looks low at 1,000 kWh can shift once minimum-usage fees and bill credits apply at your real usage.</p>
-          <ul>
-            <li><strong>Match the plan to your usage</strong>, not to a headline rate.</li>
-            <li><strong>Check the kWh tiers</strong> the plan prices at, so the number you see is the number you live with.</li>
-          </ul>
-        </div>
+      <h2>You can choose anyone in Texas. Here is why people choose Ambit.</h2>
+      <p class="sub">Texas lets you pick your retail provider. On price, plans run close. Where Ambit pulls ahead is what you get back.</p>
+      <div class="compare">
+        <table class="ctable">
+          <thead>
+            <tr>
+              <th class="feat">What you get</th>
+              <th class="amb">Ambit (Energy&nbsp;Direct)</th>
+              <th>Typical Texas provider</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="feat">A real path to a $0 energy bill — refer 15 active customers and Ambit credits the average of what they pay, up to your entire energy charge, every month with no time limit to get there</td>
+              <td class="amb"><span class="yes">✓ Free Energy</span></td>
+              <td class="alt"><span class="meh">Not offered</span></td>
+            </tr>
+            <tr>
+              <td class="feat">$50 a month in Reward Dollars that never expire, redeemable 500,000+ ways (dining, retail, travel) on the Ultimate Perks plan</td>
+              <td class="amb"><span class="yes">✓</span></td>
+              <td class="alt"><span class="meh">Rare</span></td>
+            </tr>
+            <tr>
+              <td class="feat">Travel reward points — 1 point for every kWh you already use, redeemable toward travel</td>
+              <td class="amb"><span class="yes">✓</span></td>
+              <td class="alt"><span class="meh">Rare</span></td>
+            </tr>
+            <tr>
+              <td class="feat">A 60-day "Try it, Like it, or Change it" window — switch to another Ambit term plan in your first 60 days with no early-termination fee</td>
+              <td class="amb"><span class="yes">✓</span></td>
+              <td class="alt"><span class="meh">Varies</span></td>
+            </tr>
+            <tr>
+              <td class="feat">100% green / renewable plan option</td>
+              <td class="amb"><span class="yes">✓</span></td>
+              <td class="alt">Common</td>
+            </tr>
+            <tr>
+              <td class="feat">No-deposit options and a switch with no interruption to your power</td>
+              <td class="amb"><span class="yes">✓</span></td>
+              <td class="alt">Common</td>
+            </tr>
+            <tr>
+              <td class="feat">Your actual rate for your address</td>
+              <td class="amb"><strong>See it by ZIP&nbsp;↓</strong></td>
+              <td class="alt">Varies</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="cnote">Ambit program terms verified on Ambit Energy's official site, June 2026:
+          <a href="https://www.ambitenergy.com/rates-and-plans/ambit-advantages/free-energy" target="_blank" rel="noopener">Free&nbsp;Energy</a>,
+          <a href="https://www.ambitenergy.com/spark/ambit-ultimate-perks" target="_blank" rel="noopener">Ultimate&nbsp;Perks</a>,
+          and the Lone Star Plus / "Try it, Like it, Change it" guarantee. "Typical Texas provider" reflects common fixed-rate retail plans;
+          always compare a specific plan's Electricity Facts Label before you enroll.</p>
       </div>
     </section>
 
-    <section class="section">
-      <h2>What to read on every Electricity Facts Label</h2>
-      <p class="sub">The EFL is the one document that tells you the truth about a Midland plan. Open it for each plan before you enroll.</p>
-      <div class="grid2">
-        <div class="panel">
-          <h3>The numbers that move your bill</h3>
-          <ul>
-            <li><strong>Price at 500 / 1,000 / 2,000 kWh</strong>: matched to your home size.</li>
-            <li><strong>Minimum-usage fees</strong>: charges that hit if you use too little.</li>
-            <li><strong>Bill credits</strong>: the usage level where any credit kicks in.</li>
-            <li><strong>TDU delivery charges</strong>: the Oncor line items, listed separately.</li>
-          </ul>
-        </div>
-        <div class="panel">
-          <h3>The terms that move your options later</h3>
-          <ul>
-            <li><strong>Rate type</strong>: fixed plans hold the energy charge for the term, variable plans can change month to month.</li>
-            <li><strong>Contract length</strong>: and what happens at the end of the term.</li>
-            <li><strong>Early-termination fee</strong>: what leaving early would cost.</li>
-            <li><strong>Renewable content</strong>: the green percentage, if that matters to you.</li>
-          </ul>
-        </div>
-      </div>
-      <p class="muted" style="margin-top:1rem;">Want the delivery side explained first? See our <a href="../../corpus/tdu-delivery-charges-explained/">TDU delivery charges guide</a>.</p>
-    </section>
-
+    <!-- Repeated conversion band -->
     <div class="cta-band">
-      <h2>Ready to see your Midland plans?</h2>
-      <p>Enter your ZIP to compare the real plans at your address and enroll online.</p>
+      <h2>Ready to see your plans?</h2>
+      <p>Enter your ZIP to compare real Midland rates and enroll online.</p>
       <form class="zipform" action="https://shopping.ambitenergy.com/Path2Plans" method="get" target="_blank" rel="noopener" onsubmit="this.promocode.value=(this.dwellingtype.value==='A'?'consultantpm':'consultantps');">
         <input type="hidden" name="customertype" value="Residential" />
         <input type="hidden" name="language" value="en" />
@@ -213,29 +288,40 @@
       </form>
     </div>
 
+    <!-- HOW TO COMPARE — concise, scannable -->
     <section class="section">
-      <h2>Why Midland homeowners pick an Ambit plan</h2>
-      <p class="sub">You can choose any retail provider in the Oncor area. On price, fixed plans run close. Where Ambit pulls ahead is what you get back on the power you already use.</p>
+      <h2>How to compare Midland plans the right way</h2>
       <div class="grid2">
         <div class="panel">
-          <h3>A real path to Free Energy</h3>
-          <p class="muted">Refer 15 active customers and Ambit credits your own energy free, with no time limit to get there. It is the kind of return a standard fixed plan does not offer.</p>
+          <h3>Why compare by your address</h3>
+          <p class="muted">Midland rates and plan availability vary by ZIP and by how much power your home actually uses, so an average misleads. The price that looks low on paper can shift once the plan is matched to your real usage.</p>
+          <ul>
+            <li><strong>Availability differs by ZIP</strong> across Midland and the Oncor area.</li>
+            <li><strong>Usage changes the winner.</strong> A small apartment and a large West Texas house rarely land on the same plan.</li>
+          </ul>
         </div>
         <div class="panel">
-          <h3>Rewards on power you already use</h3>
-          <p class="muted">The Ultimate Perks plan adds $50 a month in Reward Dollars, and travel plans earn 1 point for every kWh. A 60-day "Try it, Like it, Change it" window lets you switch Ambit term plans with no early-termination fee in your first 60 days. Green plan and no-deposit options are available.</p>
+          <h3>What to check on each plan</h3>
+          <ul>
+            <li><strong>Price at 500 / 1,000 / 2,000 kWh:</strong> matched to your home size.</li>
+            <li><strong>Minimum-usage fees:</strong> charges if you use too little.</li>
+            <li><strong>Bill credits:</strong> the usage level where they kick in.</li>
+            <li><strong>Term &amp; early-termination fee:</strong> what leaving early costs.</li>
+            <li><strong>Renewable content:</strong> the green percentage, if it matters to you.</li>
+          </ul>
         </div>
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section">
-      <h2>Midland plan-comparison questions</h2>
-      <details class="accordion"><summary>Is Ambit available in Midland, TX?</summary>
-        <p>Yes. Ambit provides retail service in deregulated parts of the Oncor area, which includes Midland and neighboring communities. Enter your ZIP to confirm the plans at your address.</p></details>
-      <details class="accordion"><summary>Do rates vary across ZIP codes in Midland?</summary>
-        <p>Yes. Rates and available terms can differ by ZIP and by usage level. Review the Electricity Facts Label for each plan before enrolling.</p></details>
-      <details class="accordion"><summary>Who manages power delivery in Midland?</summary>
-        <p>Oncor is the Transmission and Distribution Utility responsible for delivering electricity and maintaining lines in Midland, no matter which retail plan you choose.</p></details>
+      <h2>Midland electricity questions</h2>
+      <details class="accordion"><summary>Why do rates differ by ZIP code in Midland?</summary>
+        <p>Enter your ZIP to see the plans available at your address. Rates and availability vary by ZIP and by how much electricity your home uses, so an average never tells the whole story.</p></details>
+      <details class="accordion"><summary>Will switching interrupt my power?</summary>
+        <p>No. Oncor keeps delivering power without interruption while your new plan simply begins billing.</p></details>
+      <details class="accordion"><summary>Who is the utility (TDU) in Midland?</summary>
+        <p>Oncor is the Transmission and Distribution Utility for the Midland area. They manage the lines, outages, and delivery regardless of your retail plan.</p></details>
       <details class="accordion"><summary>Is there any cost to compare or to get help?</summary>
         <p>No. Comparing plans and getting help from Energy Direct is free. You enroll directly in the plan you choose.</p></details>
     </section>
@@ -255,6 +341,7 @@
     </div>
   </footer>
 
+  <!-- Business-identity schema (item 4) -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -276,9 +363,9 @@
   </script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-    {"@type":"Question","name":"Is Ambit available in Midland, TX?","acceptedAnswer":{"@type":"Answer","text":"Yes. Ambit provides retail service in deregulated parts of the Oncor area, which includes Midland and neighboring communities. Enter your ZIP to confirm the plans at your address."}},
-    {"@type":"Question","name":"Do rates vary across ZIP codes in Midland?","acceptedAnswer":{"@type":"Answer","text":"Yes. Rates and available terms can differ by ZIP and by usage level. Review the Electricity Facts Label for each plan before enrolling."}},
-    {"@type":"Question","name":"Who manages power delivery in Midland?","acceptedAnswer":{"@type":"Answer","text":"Oncor is the Transmission and Distribution Utility responsible for delivering electricity and maintaining lines in Midland, no matter which retail plan you choose."}},
+    {"@type":"Question","name":"Why do electricity rates differ by ZIP code in Midland?","acceptedAnswer":{"@type":"Answer","text":"Enter your service address or ZIP code to see the plans available at your location. Rates and availability vary by ZIP and usage, so an average never tells the whole story."}},
+    {"@type":"Question","name":"Will switching providers interrupt my power in Midland?","acceptedAnswer":{"@type":"Answer","text":"No. Oncor continues electric delivery without interruption while your new plan begins billing."}},
+    {"@type":"Question","name":"Who is the TDU in Midland?","acceptedAnswer":{"@type":"Answer","text":"Oncor is the Transmission and Distribution Utility for the Midland area, managing lines, outages, and delivery regardless of your retail plan."}},
     {"@type":"Question","name":"Is there any cost to compare Midland electricity plans with Energy Direct?","acceptedAnswer":{"@type":"Answer","text":"No. Comparing plans and getting help from Energy Direct is free; you enroll directly in the plan you choose."}}
   ]}
   </script>
